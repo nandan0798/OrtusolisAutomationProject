@@ -1,9 +1,11 @@
 package Evenkart;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 public class ProductFlowTest extends BaseTest {
 
+	@Test
     public void testAddSubCategory() throws InterruptedException {
         setup();
         login("emerg@emergindia.org", "eVENKART@2024");

@@ -42,8 +42,8 @@ public class AdminPanel {
 //		Thread.sleep(5000);
 //		
 //		//Product flow
-	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-	Thread.sleep(5000);
+//	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
+//	Thread.sleep(5000);
 	
 	//Category (Add Category)
 //	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/div/ul/li[1]/a/span")).click();
@@ -122,24 +122,24 @@ public class AdminPanel {
 //             driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Update']")).click();
 //             driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 //             Thread.sleep(5000);
-		 
-
-
-		
-		
-       //Products
-	         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
-	         Thread.sleep(4000);
-	        // driver.findElement(By.name("categories")).click();
-	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-	         Thread.sleep(5000);
-	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
-	         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
-	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
-	         Thread.sleep(5000);
-		driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-		Thread.sleep(4000);
-		
+//		 
+//
+//
+//		
+//		
+////       //Products
+//         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
+//	         Thread.sleep(4000);
+//	        
+//	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+//	         Thread.sleep(5000);
+//	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
+//         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
+//	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
+//        Thread.sleep(5000);
+//	driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
+//		Thread.sleep(4000);
+//	
 		
 //	         //Ratings and reviews
 //	         driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
@@ -147,44 +147,152 @@ public class AdminPanel {
 //	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
 //	         Thread.sleep(3000);
          
-//	         
-//	         Thread.sleep(4000);
-//		  driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-//		   Thread.sleep(4000);
-//	         
+
+         
 //        Thread.sleep(2000);  // Wait for File Upload Dialog to Open
-//		
-//		Thread.sleep(5000);
-//		zAttributes Feature
-//		driver.findElement(By.xpath("//*[@id=\"sidebar-menu\"]/li[3]/a/span")).click();
-//		driver.findElement(By.xpath("//*[@id=\"users\"]/li[1]/a/span")).click();
+	
+		Thread.sleep(5000);
+//		Attributes Feature
+//	driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
+//	Thread.sleep(3000);
+//		//Attribute Management 
+//		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
+//		//Attribute Key Name
 //		driver.findElement(By.id("attributekey1")).sendKeys("Company");
+//		//Attribute Key Description 
 //		driver.findElement(By.id("attributedescription1")).sendKeys("Work Related");
+//		//ADD button
 //		driver.findElement(By.id("Addattributekey")).click();
-//		driver.findElement(By.id("search_input_all")).sendKeys("Company");
+//		//Table search to update or delete attribute key
+//	driver.findElement(By.id("search_input_all")).sendKeys("Company");
+//		Thread.sleep(4000);
+//		//Show table
+//		WebElement Show =driver.findElement(By.xpath("//select[@name='attributemanagementTable_length']"));
+//		Show.sendKeys("All");
+//		Show.click();
+//		Thread.sleep(4000);
 //		 WebElement aaname = driver.findElement(By.id("search_input_all"));
 //         aaname.sendKeys("Company");
 //         aaname.click();
 //         Thread.sleep(4000);
 //		driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[2]")).click();
-//		driver.findElement(By.xpath("//a[@id='updtattrikey52']")).click();
+//		driver.findElement(By.xpath("//a[@id='updtattrikey54']")).click();
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 //		Thread.sleep(4000);
 	
+//	//Attribute Mapping 
+//	
+//		driver.findElement(By.xpath("//span[normalize-space()='Attribute Mapping']")).click();
+//		Thread.sleep(3000);
+////		//Attribute Key Name
+////		driver.findElement(By.xpath("//select[@id='attributeKeyDetails']//option[contains(text(),'Company')]")).click();
+////		Thread.sleep(2000);
+////		//Attribute Key Value
+////		driver.findElement(By.name("text")).sendKeys("Software");
+////		//ADD button
+////		driver.findElement(By.id("Addattributekey")).click();
+//	
+//	   //Attribute Mapping Update or delete table 
+//	   WebElement Sea =  driver.findElement(By.id("search_input_all"));
+//	   Sea.sendKeys("Software");
+//	   Sea.click();
+//	   Thread.sleep(3000);
+//	   driver.findElement(By.xpath("//tbody/tr[224]/td[4]/div[1]/button[2]")).click();
+//	   driver.findElement(By.xpath("//a[@id='updtattrikey244']")).click();
+//	   driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
+//	   Thread.sleep(4000); 
+	
+//	//Sub Category Attribute Mapping 
+//	  driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
+//   Thread.sleep(3000);
+//	  
+//	  //Select Category
+//	  driver.findElement(By.xpath("//select[@id='attributecategory']//option[contains(text(),'Testing Category')]")).click();
+//	  Thread.sleep(4000);
+//	  
+//	  //Select SubCategory 
+//	  driver.findElement(By.xpath("//select[@id='attributesubcategory']//option[contains(text(),'TestSubCategory')]")).click();
+//	  Thread.sleep(4000);
+//	  
+//	  //Get Attributes 
+//	  driver.findElement(By.id("updateattributesubmapping")).click();
+//	  Thread.sleep(4000);
+//	   
+//	   //Sub Category Map 
+//   driver.findElement(By.xpath("//select[@name='unmappedproductstable_length']")).sendKeys("All");
+//   Thread.sleep(3000);
+//     WebElement Map = driver.findElement(By.id("search_input_all"));
+//       Map.sendKeys("Company");
+//       Map.click();
+//       Thread.sleep(4000);
+//       driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
+//       Thread.sleep(5000); 
+	
+//	//Sub Category Mapped Attribute 
+//	driver.findElement(By.xpath("//span[normalize-space()='Sub Category Mapped Attribute']")).click();
+//	Thread.sleep(3000); 
+//	
+//	//Select Category
+//      driver.findElement(By.xpath("//select[@id='mappedattributecategory']//option[contains(text(),'Testing Category')]")).click();
+//	  Thread.sleep(4000);
+//	
+//	//Select SubCategory 
+//	  driver.findElement(By.xpath("//select[@id='mappedattributesubcategory']//option[contains(text(),'TestSubCategory')]")).click();
+//	  Thread.sleep(4000);
+//	  
+//	  //Get ATtributes 
+//	  driver.findElement(By.id("updateloadallattributekeysformappedproducts")).click();
+//	  Thread.sleep(4000);
+//	
+//	  //Text field search to delete mapped attribute 
+//	   WebElement delete = driver.findElement(By.id("search_input_all"));
+//	   delete.sendKeys("Company");
+//	   delete.click();
+//	   Thread.sleep(3000);
+//	   driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
+//	   driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
+//	
 		   //Users (Add user)
 		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
 		   Thread.sleep(5000);
+		   //Add user
 		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
 		   Thread.sleep(5000);
-		   driver.findElement(By.xpath("//*[@name='userRole']//option[contains(text(),'Distributor')]")).click();
-		driver.findElement(By.id("userFirstName")).sendKeys("Manju");
-		driver.findElement(By.id("userLastName")).sendKeys("Java");
-		driver.findElement(By.id("userPhoneNumber")).sendKeys("9938374821");
-		driver.findElement(By.id("userEmailId")).sendKeys("manj@gmail.com");
-		driver.findElement(By.id("userPassword")).sendKeys("123");
-		driver.findElement(By.xpath("(//button[normalize-space()='Add'])[1]")).click();
-		Thread.sleep(5000);
+//		   //User Role Distributor
+//		   driver.findElement(By.xpath("//*[@name='userRole']//option[contains(text(),'Distributor')]")).click();
+//		   //First Name
+//		driver.findElement(By.id("userFirstName")).sendKeys("prajwal");
+//		//Last Name
+//		driver.findElement(By.id("userLastName")).sendKeys("Gowda");
+//		//Phone number
+//		driver.findElement(By.id("userPhoneNumber")).sendKeys("9938374842");
+//		//Email Id
+//		driver.findElement(By.id("userEmailId")).sendKeys("prg@gmail.com");
+//		//Password
+//		driver.findElement(By.id("userPassword")).sendKeys("123");
+//		//ADD Button
+//		WebElement addButton = driver.findElement(By.id("addUser"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addButton);
+//		Thread.sleep(5000); 
+		   
+		   //distributor or sub admin load table
+//		   driver.findElement(By.xpath("//input[@id='loaddistributororadmin']//option[contains(text(),'Distributor']")).click();
+//		   Thread.sleep(4000);
+		   
+		   //Unable to work on this couldn't find the solution 
+		   
+//		WebElement distributor = driver.findElement(By.xpath("//input[@type='search']"));
+//		distributor.sendKeys("prajwal");
+//		distributor.click();
+//		Thread.sleep(3000);
+//		driver.findElement(By.xpath("//tr[@class='even']//td[contains(text(),'2')]//following::button[2]\r\n")).click();
+//		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
+//		driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
+//		Thread.sleep(4000);
+//		   
+		   
 		
+	
 		driver.findElement(By.xpath("//*[@name='admin']//option[conatins(text(),'Distributor')]")).click();
 		Thread.sleep(5000);
 		WebElement Search = driver.findElement(By.className("form"));

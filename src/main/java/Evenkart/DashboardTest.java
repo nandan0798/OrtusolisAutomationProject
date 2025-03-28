@@ -1,9 +1,12 @@
 package Evenkart;
 
 import org.openqa.selenium.By;
+import org.testng.annotations.Test;
 
 public class DashboardTest extends BaseTest {
 
+	
+	@Test
     public void testDashboardNavigation() throws InterruptedException {
         setup();
         login("emerg@emergindia.org", "eVENKART@2024");
