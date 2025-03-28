@@ -38,11 +38,9 @@ public class AdminPanel {
 		
 	
 		
-//		//Dashboard
-//		driver.findElement(By.className("nav")).click();		
-//		driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[1]/a/span")).click();
-//		Thread.sleep(5000);
-//		
+		//Dashboard
+         driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
+         Thread.sleep(3000);
 //		//Product flow
 //	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
 //	Thread.sleep(5000);
