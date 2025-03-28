@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="Evenkart.ProductFlowTest">
+      <class name="Evenkart.AdminPanel">
         <methods>
-          <include name="testAddSubCategory"/>
+          <include name="testAdminPanel"/>
         </methods>
-      </class> <!-- Evenkart.ProductFlowTest -->
+      </class> <!-- Evenkart.AdminPanel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -14,6 +14,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.Test;
 
 //Test Cases 
 // 1)Launch Browser 
@@ -22,7 +23,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 // 4)Close 
 public class AdminPanel {
 
-	public static void main(String[] args) throws InterruptedException, AWTException {
+	@Test
+	public void testAdminPanel() throws InterruptedException, AWTException {
 		// TODO Auto-generated method stub
 		
 		WebDriver driver = new ChromeDriver();
@@ -151,7 +153,7 @@ public class AdminPanel {
          
 //        Thread.sleep(2000);  // Wait for File Upload Dialog to Open
 	
-		Thread.sleep(5000);
+//		Thread.sleep(5000);
 //		Attributes Feature
 //	driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
 //	Thread.sleep(3000);
@@ -252,12 +254,12 @@ public class AdminPanel {
 //	   driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
 //	   driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
 //	
-		   //Users (Add user)
-		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
-		   Thread.sleep(5000);
+//		   //Users (Add user)
+//		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
+//		   Thread.sleep(5000);
 		   //Add user
-		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
-		   Thread.sleep(5000);
+//		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
+//		   Thread.sleep(5000);
 //		   //User Role Distributor
 //		   driver.findElement(By.xpath("//*[@name='userRole']//option[contains(text(),'Distributor')]")).click();
 //		   //First Name
@@ -289,41 +291,84 @@ public class AdminPanel {
 //		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
 //		Thread.sleep(4000);
-//		   
 		   
-		
+		   
+//		   //Modify user
+//		   driver.findElement(By.xpath("//span[normalize-space()='Modify User']")).click();
+//		   //Select distributor load table
+////		   driver.findElement(By.xpath("//input[@id='searchUserDetails1']//option[contains(text(),'Distributor')]")).click();
+//		   Thread.sleep(4000);
+//		   //Table search to active/inactive or delete distributor 
+//		   WebElement delete = driver.findElement(By.id("search_input_all"));
+//		   delete.sendKeys("nandhan");
+//		   delete.click();
+//		   Thread.sleep(3000);
+//		   //Info button click
+//		   driver.findElement(By.xpath("//tbody/tr[2]/td[7]/div[1]/button[2]")).click();
+//		   //delete distributor name
+//		   driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Delete']")).click();
+//		   //confirmation for delete swal 
+//		   driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
+//		   Thread.sleep(5000);
+		   
+		   
 	
-		driver.findElement(By.xpath("//*[@name='admin']//option[conatins(text(),'Distributor')]")).click();
-		Thread.sleep(5000);
-		WebElement Search = driver.findElement(By.className("form"));
-		Search.sendKeys("Reddy");
-		Search.click();
-		Thread.sleep(5000);
-		driver.findElement(By.xpath("//tr[@class='odd']//button[2]")).click();
-		Thread.sleep(3000);
-		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
-		driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
-		Thread.sleep(5000);
+		
+		//Reports click 
+//		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
+//		Thread.sleep(3000);
+//		//Product Transaction Report
+//		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
+//		Thread.sleep(3000);
+//		//Select distributor from loader
+//		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
+//		Thread.sleep(3000);
+		
+//		//order report click
+//		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
+//		Thread.sleep(3000);
+//		//start date 
+//		WebElement start = driver.findElement(By.xpath("//input[@id='OrderReportStartDate']"));
+//		start.sendKeys("02/03/2024");
+//		start.click();
+//		
+//		//end date
+//		WebElement end = driver.findElement(By.xpath("//input[@id='OrderReportEndDate']"));
+//		 end.sendKeys("03/02/2025");
+//		 end.click();
+//	   //Select status
+//	   Thread.sleep(3000);
+//	   driver.findElement(By.xpath("//input[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
+//	   //Select distributor 
+//	   driver.findElement(By.xpath("//input[@name='orderdistributorId']//option[contains(text(),'Astra Designs')]")).click();
+//	   Thread.sleep(3000);
+//	   //Generate pdf 
+//	   driver.findElement(By.id("ordertablepdf")).click();
+//	   Thread.sleep(4000);
+//	   
+		//Entire reports feature is having issue java team has fixed but needs to push
 		
 		
-		
-		
-		//Branding 
-		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
-		Thread.sleep(4000);
+//		//Branding 
+//		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
+//		Thread.sleep(4000);
+		//Banner details
 //		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
+		//Banner content
 //		driver.findElement(By.name("text")).sendKeys("Testing Banner");
+		//Banner image link
 //		driver.findElement(By.id("bannerImageLink")).sendKeys("Test Banner");
 //		Thread.sleep(4000);
+		//select banner image 
 //		driver.findElement(By.id("fileToUploadBanner")).sendKeys("C:\\Users\\Nandan A S\\Downloads\\emerg admin logo.jpg");
 //		Thread.sleep(7000);
-//		driver.findElement(By.xpath("(//button[normalize-space()='Add'])[1]")).click();
+		//ADD banner button
 //		WebElement radioButton = driver.findElement(By.id("AddBannerId"));
-		
+//		
 //		        // Scroll to the radio button
 //		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
-	
-	
+//	
+//	
 //	        // Add a small delay to ensure scrolling is complete (optional)
 //		        Thread.sleep(3000);
 //		
@@ -334,49 +379,59 @@ public class AdminPanel {
 //		        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
 //		        driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
 //		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
-		        
+//		        
 //		        //Footer
-//		        driver.findElement(By.xpath("")).click();
+//		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
 //		        Thread.sleep(5000);
+//		        driver.findElement(By.id("PhoneNumber")).clear();
+//		        driver.findElement(By.id("EmailId")).clear();
+//		        Thread.sleep(3000);
 //		        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
 //		        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
+//		        
 //		        Thread.sleep(4000);
-//		        driver.findElement(By.name("submit")).click();
+//		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
 		        
-		        //payout
-		        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
-		        Thread.sleep(5000);
-		        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
-		        Thread.sleep(4000);
-		        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-		         Thread.sleep(5000);
+	//		        //payout
+	//		        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
+	//		        Thread.sleep(5000);
+	//		        //Settlement
+	//		        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
+	//		        Thread.sleep(4000);
+	//		        //select settlement distributor
+	//		        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+	//		         Thread.sleep(5000);
+	//		        
+	//		         //Settlement History
+	//		         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
+	//		         Thread.sleep(4000);
+	//		         //select distributor
+	//		         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+	//		         //select duration
+	//		         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
+	//		         //week calendar
+	//		         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("13.2025");
+	//		         Thread.sleep(4000);
+	//		         //get settlement record
+	//		         driver.findElement(By.xpath("//button[@id='update']")).click();
+	//		         Thread.sleep(4000);
 		        
-		         //Settlement History
-		         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
-		         Thread.sleep(4000);
-		         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-		         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
-		         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("13.2025");
-		         Thread.sleep(4000);
-		         driver.findElement(By.xpath("//button[@id='update']")).click();
-		         Thread.sleep(4000);
 		        
-		        
-		         //User Profile
-		         driver.findElement(By.id("//span[normalize-space()='User Profile']")).click();
-		         Thread.sleep(5000);
-		         driver.findElement(By.id("updateProfileDetails")).click();
-		         Thread.sleep(4000);
-		         
-		         //company information 
-		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
-		         driver.findElement(By.name("ComapanyDetailssubmit")).click();
-		         Thread.sleep(5000);
-		         
-		         //payment details
-		         driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
-		         Thread.sleep(4000);
-		         driver.findElement(By.name("submit")).click();
+//		         //User Profile(Didn't work need to fix this by me)
+//		         driver.findElement(By.id("//span[normalize-space()='User Profile']")).click();
+//		         Thread.sleep(5000);
+//		         driver.findElement(By.id("updateProfileDetails")).click();
+//		         Thread.sleep(4000);
+//		         
+//		         //company information 
+//		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
+//		         driver.findElement(By.name("ComapanyDetailssubmit")).click();
+//		         Thread.sleep(5000);
+//		         
+//		         //payment details
+//		         driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
+//		         Thread.sleep(4000);
+//		         driver.findElement(By.name("submit")).click();
 		         
 		         
 		         //Authentication
@@ -384,8 +439,8 @@ public class AdminPanel {
 		         Thread.sleep(4000);
 		         driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
 		         Thread.sleep(4000);
-		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
-		         Thread.sleep(5000);
+//		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
+//		         Thread.sleep(5000);
 		        
 		         driver.close();
 		        

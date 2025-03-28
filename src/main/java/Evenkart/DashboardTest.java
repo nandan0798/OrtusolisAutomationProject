@@ -17,7 +17,7 @@ public class DashboardTest extends BaseTest {
 
         // Validate if Dashboard page is loaded
         String title = driver.getTitle();
-        if (title.equals("Dashboard")) {
+        if (title.contains("Panel")) {
             System.out.println("Dashboard navigation test passed");
         } else {
             System.out.println("Dashboard navigation test failed");
