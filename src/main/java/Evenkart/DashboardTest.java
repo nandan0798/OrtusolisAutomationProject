@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 public class DashboardTest extends BaseTest {
 
 	
-	@Test
+	@Test 
     public void testDashboardNavigation() throws InterruptedException {
         setup();
         login("emerg@emergindia.org", "eVENKART@2024");
 
         // Navigate to Dashboard
-        driver.findElement(By.xpath("//span[text()='Dashboard']")).click();
+        driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
         Thread.sleep(3000);
 
         // Validate if Dashboard page is loaded

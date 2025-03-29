@@ -4,6 +4,7 @@
   <test thread-count="5" name="DashboardTest">
     <classes>
       <class name="Evenkart.DashboardTest"/>
+       <class name="Evenkart.AdminPanel"/>
     </classes>
   </test> <!-- ProductFlowTest -->
 </suite> <!-- Suite -->

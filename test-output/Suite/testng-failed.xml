@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="ProductFlowTest(failed)">
+  <test thread-count="5" name="DashboardTest(failed)">
     <classes>
-      <class name="Evenkart.ProductFlowTest">
+      <class name="Evenkart.DashboardTest">
         <methods>
-          <include name="testAddSubCategory"/>
+          <include name="testDashboardNavigation"/>
         </methods>
-      </class> <!-- Evenkart.ProductFlowTest -->
+      </class> <!-- Evenkart.DashboardTest -->
     </classes>
-  </test> <!-- ProductFlowTest(failed) -->
+  </test> <!-- DashboardTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->
