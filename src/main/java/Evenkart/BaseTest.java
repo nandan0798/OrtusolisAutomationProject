@@ -32,7 +32,7 @@ public class BaseTest {
     // Method to close the browser
     public void teardown() {
 //        if (driver != null) {
-            driver.close();
+            driver.quit();
 //        }
     }
 }

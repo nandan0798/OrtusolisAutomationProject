@@ -1,5 +1,7 @@
 package Evenkart;
 
+import static org.testng.Assert.assertEquals;
+
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
@@ -14,6 +16,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 //Test Cases 
@@ -21,13 +24,27 @@ import org.testng.annotations.Test;
 // 2)Open url https://ortusolis.in/eVenkart-Development/Admin-Distributor/sign-in.php
 // 3)Validate the title "Admin Panel"
 // 4)Close 
-public class AdminPanel {
+public class AdminPanel extends BaseTest {
 
 	@Test
-	public void testAdminPanel() throws InterruptedException, AWTException {
+	public void testLogin() throws InterruptedException, AWTException {
 		// TODO Auto-generated method stub
 		
-		WebDriver driver = new ChromeDriver();
+		setup();
+		driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
+		driver.manage().window().maximize();
+		driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
+		driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
+		driver.findElement(By.name("remember")).click();
+		driver.findElement(By.cssSelector("button[type='submit']")).click();
+		Thread.sleep(5000);		
+		teardown();
+	}
+	
+	
+	@Test
+	public void testDashBoard() throws InterruptedException, AWTException {
+		setup();
 		driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
 		driver.manage().window().maximize();
 		driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
@@ -35,7 +52,6 @@ public class AdminPanel {
 		driver.findElement(By.name("remember")).click();
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		Thread.sleep(5000);
-		
 	
 		
 //		//Dashboard
@@ -440,7 +456,7 @@ public class AdminPanel {
 //		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
 //		         Thread.sleep(5000);
 		        
-		         driver.close();
+		         teardown();
 		        
 		        
         // Use Robot Class to Type the File Path
