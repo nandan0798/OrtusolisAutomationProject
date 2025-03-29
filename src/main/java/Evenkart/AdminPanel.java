@@ -67,7 +67,20 @@ public class AdminPanel extends BaseTest {
 			Thread.sleep(5000);
 			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
 	         Thread.sleep(3000);
-	
+	         teardown();
+		}
+		
+		public void testProductFlowTwo() throws InterruptedException, AWTException {
+			setup();
+			driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
+			driver.manage().window().maximize();
+			driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
+			driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
+			driver.findElement(By.name("remember")).click();
+			driver.findElement(By.cssSelector("button[type='submit']")).click();
+			Thread.sleep(5000);
+			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
+	         Thread.sleep(3000);
 		
 //		//Dashboard
 //         driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
