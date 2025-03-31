@@ -88,6 +88,9 @@ public class AdminPanel extends BaseTest {
 //		//Product flow
 //	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
 //	Thread.sleep(5000);
+	         
+
+	      
 	
 	//Category (Add Category)
 //	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/div/ul/li[1]/a/span")).click();
