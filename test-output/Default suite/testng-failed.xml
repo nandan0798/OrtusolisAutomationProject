@@ -5,7 +5,7 @@
     <classes>
       <class name="Evenkart.AdminPanel">
         <methods>
-          <include name="testLogin"/>
+          <include name="Category"/>
         </methods>
       </class> <!-- Evenkart.AdminPanel -->
     </classes>

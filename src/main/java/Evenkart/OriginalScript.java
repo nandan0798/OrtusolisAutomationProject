@@ -1,100 +1,30 @@
 package Evenkart;
 
-import static org.testng.Assert.assertEquals;
-
-import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.Toolkit;
-import java.awt.datatransfer.StringSelection;
-import java.awt.event.KeyEvent;
-import java.time.Duration;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
-//Test Cases 
-// 1)Launch Browser 
-// 2)Open url https://ortusolis.in/eVenkart-Development/Admin-Distributor/sign-in.php
-// 3)Validate the title "Admin Panel"
-// 4)Close 
-public class AdminPanel extends BaseTest {
+public class OriginalScript {
 
-	@Test
-	public void testLogin() throws InterruptedException, AWTException {
-		// TODO Auto-generated method stub
+	public static void main(String[] args) throws InterruptedException {
 		
-		setup();
-		driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
+		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
+		
+		//Admin Panel Url 
+        driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
+        //Email id
+        driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
+        //Password
 		driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
+		//Remember me
 		driver.findElement(By.name("remember")).click();
+		//Login
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		Thread.sleep(5000);		
-		teardown();
-	}
-	
-	
-	@Test
-	public void testDashBoard() throws InterruptedException, AWTException {
-		setup();
-		driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
-		driver.manage().window().maximize();
-		driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
-		driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
-		driver.findElement(By.name("remember")).click();
-		driver.findElement(By.cssSelector("button[type='submit']")).click();
-		Thread.sleep(5000);
-	}
+		Thread.sleep(5000);	
 		
-		
-		@Test 
-		public void testProductflow() throws InterruptedException, AWTException {
-			setup();
-			driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
-			driver.manage().window().maximize();
-			driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
-			driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
-			driver.findElement(By.name("remember")).click();
-			driver.findElement(By.cssSelector("button[type='submit']")).click();
-			Thread.sleep(5000);
-			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
-	         Thread.sleep(3000);
-	         teardown();
-		}
-		
-		@Test
-		public void Category() throws InterruptedException, AWTException {
-			setup();
-			driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
-			driver.manage().window().maximize();
-			driver.findElement(By.name("email")).sendKeys("emerg@emergindia.org");
-			driver.findElement(By.name("password")).sendKeys("eVENKART@2024");
-			driver.findElement(By.name("remember")).click();
-			driver.findElement(By.cssSelector("button[type='submit']")).click();
-			Thread.sleep(5000);
-			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
-	         Thread.sleep(3000);
-	         teardown();
-	         driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-	     	Thread.sleep(5000); 
-		
-//		//Dashboard
-//         driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
-//         Thread.sleep(3000);
-	         
-	         
-	         
-	         
-	         
-	         
 //		//Product flow
 //	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
 //	Thread.sleep(5000); 
@@ -310,7 +240,7 @@ public class AdminPanel extends BaseTest {
 //		   //Users (Add user)
 //		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
 //		   Thread.sleep(5000);
-		   //Add user
+//		   //Add user
 //		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
 //		   Thread.sleep(5000);
 //		   //User Role Distributor
@@ -330,22 +260,24 @@ public class AdminPanel extends BaseTest {
 //		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addButton);
 //		Thread.sleep(5000); 
 		   
-			   
-//			WebElement distributor = driver.findElement(By.xpath("//input[@type='search']"));
-//			distributor.sendKeys("prajwal");
-//			distributor.click();
-//			Thread.sleep(3000);
-	//
-//			 WebElement radioButton = driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']"));
-//		       // Add a small delay to ensure scrolling is complete (optional)
-//		       Thread.sleep(3000);
-//		    
-//		       // Click the radio button
-//		          ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
-//		          Thread.sleep(4000);
-//			driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
-//			driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
-//			Thread.sleep(4000);
+
+//		   //Distributor approve table 
+//		   
+//		WebElement distributor = driver.findElement(By.xpath("//input[@type='search']"));
+//		distributor.sendKeys("prajwal");
+//		distributor.click();
+//		Thread.sleep(3000);
+//
+//		 WebElement radioButton = driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']"));
+//	       // Add a small delay to ensure scrolling is complete (optional)
+//	       Thread.sleep(3000);
+//	    
+//	       // Click the radio button
+//	          ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
+//	          Thread.sleep(4000);
+//		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
+//		driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
+//		Thread.sleep(4000);
 		   
 		   
 //		   //Modify user
@@ -497,7 +429,7 @@ public class AdminPanel extends BaseTest {
 //		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
 //		         Thread.sleep(5000);
 		        
-		         teardown();
+		         
 		        
 		        
         // Use Robot Class to Type the File Path
@@ -553,4 +485,9 @@ public class AdminPanel extends BaseTest {
          
 	}
 
-}
+
+
+
+	}
+
+
