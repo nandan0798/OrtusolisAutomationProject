@@ -9,6 +9,7 @@
           <include name="Payment"/>
           <include name="Category"/>
           <include name="Dashboard"/>
+          <include name="testProductflow"/>
         </methods>
       </class> <!-- Evenkart.AdminPanel -->
     </classes>
