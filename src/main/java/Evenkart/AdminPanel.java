@@ -85,10 +85,15 @@ public class AdminPanel extends BaseTest {
 	         teardown();
 	         driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
 	     	Thread.sleep(5000); 
-		
+		}
 //		//Dashboard
 //         driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
 //         Thread.sleep(3000);
+		    @Test
+	     	public void Dashboard () {
+	     		driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
+	     		System.out.println("Dashboard clicked Successfully");
+	     	}
 	         
 	         
 	         
@@ -484,73 +489,39 @@ public class AdminPanel extends BaseTest {
 //		         Thread.sleep(5000);
 //		         
 //		         //payment details
-//		         driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
+		    @Test
+		    public void Payment () {
+		    	driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
 //		         Thread.sleep(4000);
 //		         driver.findElement(By.name("submit")).click();
+		    }
+		    	
+		       
 		         
 		         
 		         //Authentication
-		         driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
-		         Thread.sleep(4000);
-		         driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
-		         Thread.sleep(4000);
-//		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
-//		         Thread.sleep(5000);
+		    @Test
+		    public void Authentication() {
+		    	  setup();
+			         driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
+			         driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
+//			         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
+//			         Thread.sleep(5000);
+			         teardown();
+		    	
+		    }
+		  
+		  
 		        
-		         teardown();
-		        
-		        
-        // Use Robot Class to Type the File Path
-//        Robot robot = new Robot();
-//
-//        // Copy the file path to clipboard
-//        StringSelection filePath = new StringSelection("D:\\1736937591263 - Copy.jpg");
-//        Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePath, null);
-//
-//        // Paste the file path in the Windows File Dialog (Ctrl + V)
-//        robot.keyPress(KeyEvent.VK_CONTROL);
-//        robot.keyPress(KeyEvent.VK_V);
-//        robot.keyRelease(KeyEvent.VK_V);
-//        robot.keyRelease(KeyEvent.VK_CONTROL);
-//
-//        // Press Enter to Upload
-//        robot.keyPress(KeyEvent.VK_ENTER);
-//        robot.keyRelease(KeyEvent.VK_ENTER);
 
-//				driver.findElement(By.xpath("//input[@type='file']")).sendKeys("D:\1736937591263 - Copy.jpg");
-		
-	
-		//driver.findElement(By.xpath("/html/body/div[3]/div[2]/div/div/div[2]/div[1]/div/div/div/form/div[2]/div/div/div/div/div[1]/div/img"));
-//		driver.findElement(By.id("CategoryImageAddition")).sendKeys("D:\1736937591263 - Copy.jpg");
-//		driver.findElement(By.xpath("//input[@type='file']")).sendKeys("D:\1736937591263 - Copy.jpg");
-
-//		driver.findElement(By.id("nutritionalNo")).click();
-//		Thread.sleep(5000);
-//		driver.findElement(By.id("CategoryId")).click();
-		
-//		driver.findElement(By.xpath("//*[@id=\"CategoryId\"]")).click();
-//		Thread.sleep(5000);
-
-//		Thread.sleep(5000);
-	
-//       driver.close();
-        
 	
 
 		
 		
 		
-//		String act_title=driver.getTitle();
-//		if(act_title.equals("Admin Panel"))
-//		{
-//			System.out.println("Test Passed");
-//		}
-//		else 
-//		{
-//			System.out.println("Test Failed");
-//		}
-//		driver.close();
+
          
-	}
+
 
 }
+

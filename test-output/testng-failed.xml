@@ -5,7 +5,10 @@
     <classes>
       <class name="Evenkart.AdminPanel">
         <methods>
+          <include name="Authentication"/>
+          <include name="Payment"/>
           <include name="Category"/>
+          <include name="Dashboard"/>
         </methods>
       </class> <!-- Evenkart.AdminPanel -->
     </classes>
