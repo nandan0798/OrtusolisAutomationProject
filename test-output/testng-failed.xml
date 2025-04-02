@@ -5,11 +5,30 @@
     <classes>
       <class name="Evenkart.AdminPanel">
         <methods>
+          <include name="Payout"/>
           <include name="Authentication"/>
-          <include name="Payment"/>
+          <include name="AttributeMapping"/>
+          <include name="testDashBoard"/>
+          <include name="Productflow"/>
+          <include name="FooterClick"/>
+          <include name="UsersClick"/>
+          <include name="Attributemapping"/>
+          <include name="Settlement"/>
+          <include name="SubCategory"/>
+          <include name="Updatedelete"/>
+          <include name="SubCategoryUpdate"/>
+          <include name="Attribute"/>
+          <include name="RatingsReviews"/>
+          <include name="SelectCategoryAttribute"/>
+          <include name="Products"/>
+          <include name="SubCategoryMap"/>
           <include name="Category"/>
+          <include name="UpdateBanner"/>
+          <include name="GetSettlementHistory"/>
+          <include name="testLogin"/>
+          <include name="UpdateAttributeKey"/>
+          <include name="BrandingClick"/>
           <include name="Dashboard"/>
-          <include name="testProductflow"/>
         </methods>
       </class> <!-- Evenkart.AdminPanel -->
     </classes>

@@ -15,14 +15,15 @@ public class BaseTest {
     // Method to initialize WebDriver
     public void setup() {
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
         driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        
     }
 
     // Method to log in to the application
     
     public void login(String email, String password) {
-        driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
         driver.findElement(By.name("email")).sendKeys(email);
         driver.findElement(By.name("password")).sendKeys(password);
         driver.findElement(By.name("remember")).click();
