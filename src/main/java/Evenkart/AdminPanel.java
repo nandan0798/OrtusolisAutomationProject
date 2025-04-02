@@ -30,6 +30,7 @@ public class AdminPanel extends BaseTest {
 	public void TestLogin() {
 		setup();
 		login("emerg@emergindia.org", "eVENKART@2024");
+		driver.close();
 	}
 
 //	@Test

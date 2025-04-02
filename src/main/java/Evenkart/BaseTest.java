@@ -18,7 +18,6 @@ public class BaseTest {
         driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        
     }
 
     // Method to log in to the application
