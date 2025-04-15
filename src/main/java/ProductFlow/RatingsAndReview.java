@@ -6,12 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class RatingsAndReview {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void Reviews (WebDriver driver) throws InterruptedException {
 		 driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
          Thread.sleep(6000);
          driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
          Thread.sleep(7000);
+         System.out.println("Review Rating is not present");
 		
 
 	}

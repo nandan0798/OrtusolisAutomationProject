@@ -2,14 +2,18 @@ package Evenkart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
+import ProductFlow.ProductFlowClick;
 
 public class Dashboard {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		WebDriver driver = new ChromeDriver();	
+	
+	public void DashboardClick(WebDriver driver) throws InterruptedException {
+		
 		driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
+		System.out.println("Dashboard action successful");
+		
+		ProductFlowClick product = new ProductFlowClick();
+		product.FlowClick(driver);
 	}
 
 }

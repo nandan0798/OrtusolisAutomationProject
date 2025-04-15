@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SubCategory {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+		public void SubCategoryFlow(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Sub-Category']")).click();
 //		driver.findElement(By.id("SubCategoryName")).sendKeys("TestSubCategory");
 //		Thread.sleep(4000);
@@ -40,6 +39,10 @@ public class SubCategory {
              driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Update']")).click();
              driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
              Thread.sleep(5000);
+             System.out.println("Subcategory Updated Successful");
+             Products products = new Products();
+             products.ProductsData(driver);
+              
 	}
 
 }

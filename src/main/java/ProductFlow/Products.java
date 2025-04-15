@@ -2,12 +2,11 @@ package ProductFlow;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class Products {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void ProductsData(WebDriver driver) throws InterruptedException {
 		 driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
          Thread.sleep(6000);
         
@@ -17,6 +16,9 @@ public class Products {
      driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
          driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
     Thread.sleep(7000);
+    System.out.println("Products activated successful");
+    RatingsAndReview ratingsData = new RatingsAndReview();
+    ratingsData.Reviews(driver);
 
 	}
 

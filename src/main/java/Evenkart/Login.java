@@ -21,6 +21,10 @@ public class Login {
 	//Login
 	driver.findElement(By.cssSelector("button[type='submit']")).click();
 	Thread.sleep(5000);	
+	System.out.println("Login Successful");
+	
+	Dashboard dashboard = new Dashboard();
+	dashboard.DashboardClick(driver);
 	}
 }
 	
