@@ -25,12 +25,13 @@ import org.testng.annotations.Test;
 // 3)Validate the title "Admin Panel"
 // 4)Close 
 public class AdminPanel extends BaseTest {
+
 	
 	@Test
 	public void TestLogin() {
 		setup();
-		login("emerg@emergindia.org", "eVENKART@2024");
-		driver.close();
+		doLogin();
+		teardown();
 	}
 
 //	@Test
@@ -98,25 +99,28 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void Dashboard() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
 		System.out.println("Dashboard clicked Successfully");
-		driver.close();
+		teardown();
 	}
 
 //		//Product flow
 	@Test
 	public void Productflow() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span"))
 				.click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Category (Add Category)
 	@Test
 	public void Categories() {
 		setup();
+		doLogin();
 		driver.findElement(
 				By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/div/ul/li[1]/a/span"))
 				.click();
@@ -139,13 +143,14 @@ public class AdminPanel extends BaseTest {
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		System.out.println("Category added successfully");
 //		driver.close();
-//	
+	teardown();
 		}
 
 	// Update or delete category
 	@Test
 	public void Updatedelete() {
 		setup();
+		doLogin();
 		WebElement search = driver.findElement(By.xpath("//input[@id='search_input_all']"));
 		search.sendKeys("Testing Category");
 		search.click();
@@ -168,14 +173,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Category updated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Add Sub Category)
 	@Test
 	public void AddSubCategory() {
 		setup();
-		
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Sub-Category']")).click();
 //		driver.findElement(By.id("SubCategoryName")).sendKeys("TestSubCategory");
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -197,13 +202,14 @@ public class AdminPanel extends BaseTest {
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		System.out.println("SubCategory added successfully");
 //		driver.close();
-//	
+		teardown();
 		}
 
 	// Sub Category Update or Delete
 	@Test
 	public void SubCategoryUpdate() {
 		setup();
+		doLogin();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebElement name = driver.findElement(By.id("search_input_all"));
 		name.sendKeys("TestSubCategory");
@@ -216,7 +222,7 @@ public class AdminPanel extends BaseTest {
 				.click();
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		System.out.println("Sub catgory updated succesfully");
-		driver.close();
+		teardown();
 	}
 
 
@@ -224,7 +230,7 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void Products() {
 		setup();
-		
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -237,36 +243,37 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Distributor products shown successfull");
-		driver.close();
+		teardown();
 	}
 
 	// Ratings and reviews
 	@Test
 	public void RatingsReviews() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Distributor product details shown");
-		driver.close();
+		teardown();
 	}
 
 //		Attributes Feature
 	@Test
 	public void Attribute() {
 		setup();
-		
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Attribute Management
 	@Test
 	public void AttributeManagement() {
 		setup();
-		
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
 		// Attribute Key Name
 //		driver.findElement(By.id("attributekey1")).sendKeys("Company");
@@ -276,13 +283,14 @@ public class AdminPanel extends BaseTest {
 //		driver.findElement(By.id("Addattributekey")).click();
 //		System.out.println("Attribute key added successfully");
 //		driver.close();
-//	
+		teardown();
 		}
 
 	// Table search to update or delete attribute key
 	@Test
 	public void UpdateAttributeKey() {
 		setup();
+		doLogin();
 		driver.findElement(By.id("search_input_all")).sendKeys("Company");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// Show table
@@ -299,13 +307,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Attribute key updated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Attribute Mapping
 	@Test
 	public void AttributeMapping() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Attribute Mapping']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		// Attribute Key Name
@@ -317,7 +326,7 @@ public class AdminPanel extends BaseTest {
 //		driver.findElement(By.id("Addattributekey")).click();
 //		System.out.println("Attribute mapping added successfully");
 //		driver.close();
-//	
+		teardown();
 		}
 
 	// Attribute Mapping Update or delete table
@@ -325,6 +334,7 @@ public class AdminPanel extends BaseTest {
 	public void Attributemapping() {
 	
 		setup();
+		doLogin();
 		WebElement Sea = driver.findElement(By.id("search_input_all"));
 		Sea.sendKeys("Software");
 		Sea.click();
@@ -334,13 +344,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Attribute mapping updated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Sub Category Attribute Mapping
 	@Test
 	public void SubCategory() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -358,13 +369,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.id("updateattributesubmapping")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Displaying sub category Attributes successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Sub Category Map
 	@Test
 	public void SubCategoryMap() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//select[@name='unmappedproductstable_length']")).sendKeys("All");
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		WebElement Map = driver.findElement(By.id("search_input_all"));
@@ -374,13 +386,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Mapped sub category attributes successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Sub Category Mapped Attribute
 	@Test
 	public void SelectCategoryAttribute() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Sub Category Mapped Attribute']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -400,13 +413,14 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.id("updateloadallattributekeysformappedproducts")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Displaying sub category mapped attribute");
-		driver.close();
+		teardown();
 	}
 
 	// Text field search to delete mapped attribute
 	@Test
 	public void DeleteMappedAttribute() {
 		setup();
+		doLogin();
 		WebElement delete = driver.findElement(By.id("search_input_all"));
 		delete.sendKeys("Company");
 		delete.click();
@@ -414,7 +428,7 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
 		System.out.println("Deleted Mapped attribute to sub category successfully");
-		driver.close();
+		teardown();
 
 	}
 
@@ -422,16 +436,17 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void UsersClick() {
 		setup();
-		
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Add user
 	@Test
 	public void AddUser() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -454,7 +469,7 @@ public class AdminPanel extends BaseTest {
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		System.out.println("Distributor added successfully");
 //		driver.close();
-//	
+		teardown();
 		}
 
 //	// Distributor Approve or reject
@@ -488,6 +503,7 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void ModifyUserClick() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Modify User']")).click();
 
 		// Select distributor load table
@@ -513,22 +529,24 @@ public class AdminPanel extends BaseTest {
 //		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 //		System.out.println("Distributor deleted successfully");
 //		driver.close();
-//	
+		teardown();
 		}
 
 	// Reports click
 	@Test
 	public void ReportsClick() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Product Transaction Report
 	@Test
 	public void ProductTransaction() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
@@ -537,7 +555,7 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Distributor data fetched successfully");
-		driver.close();	
+		teardown();
 		}
 	
 
@@ -576,15 +594,17 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void BrandingClick() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Banner details
 	@Test
 	public void BannerDetailsAdd() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
 		// Banner content
 //		driver.findElement(By.name("text")).sendKeys("Testing Banner");
@@ -608,26 +628,28 @@ public class AdminPanel extends BaseTest {
 //		((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
 //		System.out.println("Banner details added successfully");
 //		driver.close();
-//	
+	teardown();
 		}
 
 	// Update Banner
 	@Test
 	public void UpdateBanner() {
 		setup();
+		doLogin();
 		driver.findElement(By.id("search_input_all")).sendKeys("Banner");
 		WebElement radioButton = driver.findElement(By.id("AddBannerId"));
 		driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
 		driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		System.out.println("Banner details updated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Footer
 	@Test
 	public void FooterClick() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
 		WebElement radioButton = driver.findElement(By.id("AddBannerId"));
 		driver.findElement(By.id("PhoneNumber")).clear();
@@ -639,35 +661,40 @@ public class AdminPanel extends BaseTest {
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
 		System.out.println("Footer details updated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// payout
 	@Test
 	public void Payout() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.close();
+		teardown();
 	}
 
 	// Settlement
 	@Test
 	public void Settlement() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// select settlement distributor
 		driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("settlement of distirbutor generated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// Settlement History
 	@Test
 	public void GetSettlementHistory() {
 		setup();
+		doLogin();
+		driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		// select distributor
@@ -682,7 +709,7 @@ public class AdminPanel extends BaseTest {
 		driver.findElement(By.xpath("//button[@id='update']")).click();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		System.out.println("Weekly settlement of distributor generated successfully");
-		driver.close();
+		teardown();
 	}
 
 	// User Profile(Didn't work need to fix this by me)
@@ -715,13 +742,14 @@ public class AdminPanel extends BaseTest {
 	@Test
 	public void Authentication() {
 		setup();
+		doLogin();
 		driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
 		driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
 		System.out.println("Log out successfull");
 //			         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
 		//System.out.println("Switch to distributor successfull");
 
-		driver.close();
+		teardown();
 	}
 
 }

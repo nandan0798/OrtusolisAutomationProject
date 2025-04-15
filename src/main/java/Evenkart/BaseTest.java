@@ -28,6 +28,10 @@ public class BaseTest {
         driver.findElement(By.name("remember")).click();
         driver.findElement(By.cssSelector("button[type='submit']")).click();
     }
+    
+    public void doLogin() {
+    	login("emerg@emergindia.org", "eVENKART@2024");
+    }
 
     // Method to close the browser
     public void teardown() {
