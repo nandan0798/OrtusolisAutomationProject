@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SubCategoryAttributeMapping {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void MapAttributes(WebDriver driver) throws InterruptedException {
 		  driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
 		   Thread.sleep(6000);
 			  
@@ -33,6 +32,9 @@ public class SubCategoryAttributeMapping {
 		       Thread.sleep(4000);
 		       driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
 		       Thread.sleep(5000); 
+		       System.out.println("Mapped successfully");
+		       SubCategoryMappedAttribute delete = new SubCategoryMappedAttribute();
+		       delete.DeleteAttributes(driver);
 			
 
 	}

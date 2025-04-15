@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AttributeMapping {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void Attributekey(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Attribute Mapping']")).click();
 		Thread.sleep(3000);
 ////		//Attribute Key Name
@@ -28,7 +27,9 @@ public class AttributeMapping {
 	   driver.findElement(By.xpath("//a[@id='updtattrikey244']")).click();
 	   driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 	   Thread.sleep(4000); 
-
+	   System.out.println("AttributeMapping Updated Successfully");
+	   SubCategoryAttributeMapping mapp = new SubCategoryAttributeMapping();
+	   mapp.MapAttributes(driver);
 	}
 
 }

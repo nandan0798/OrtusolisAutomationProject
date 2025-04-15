@@ -6,11 +6,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AttributesClick {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void AttributesData(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
         Thread.sleep(3000);
-
+        System.out.println("Attributes clicked successful");
+        AttributeManagement manage = new AttributeManagement();
+        manage.Attributesmap(driver);
+        System.out.println("Attributes added successfully");
+       
 	}
 
 }

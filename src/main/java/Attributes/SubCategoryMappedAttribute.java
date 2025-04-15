@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SubCategoryMappedAttribute {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void DeleteAttributes(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Sub Category Mapped Attribute']")).click();
 		Thread.sleep(6000); 
 		
@@ -31,6 +30,7 @@ public class SubCategoryMappedAttribute {
 		   Thread.sleep(6000);
 		   driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
 		   driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
+		   System.out.println("Deleted attribute successfully");
 
 	}
 

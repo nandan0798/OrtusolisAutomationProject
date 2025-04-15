@@ -7,8 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AttributeManagement {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void Attributesmap(WebDriver driver) throws InterruptedException {
+		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
 //		//Attribute Key Name
 //		driver.findElement(By.id("attributekey1")).sendKeys("Company");
 //		//Attribute Key Description 
@@ -33,6 +33,10 @@ public class AttributeManagement {
 		driver.findElement(By.xpath("//a[@id='updtattrikey54']")).click();
 		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		Thread.sleep(4000);
+		System.out.println("AttributeManagement Updated Successfully");
+		
+		AttributeMapping add = new AttributeMapping();
+		add.Attributekey(driver);
 
 	}
 
