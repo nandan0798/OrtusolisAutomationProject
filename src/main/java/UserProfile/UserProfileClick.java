@@ -6,10 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UserProfileClick {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		  driver.findElement(By.id("//span[normalize-space()='User Profile']")).click();
-//	         Thread.sleep(5000);
+	public void ProfileClick(WebDriver driver) throws InterruptedException {
+		driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
+        Thread.sleep(5000);
+	         System.out.println("Profile clicked successfully");
+	         ProfileAccountDetails account = new ProfileAccountDetails();
+	         account.AccountDetails(driver);
+	         
 
 	}
 

@@ -8,8 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BannerDetails {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void Update(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
 		//Banner content
 //		driver.findElement(By.name("text")).sendKeys("Testing Banner");
@@ -47,7 +46,9 @@ public class BannerDetails {
 		        driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
 		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 		        Thread.sleep(4000);
-
+		        System.out.println("Banner updated successfully");
+		        FooterDetails foo = new FooterDetails();
+		        foo.UpdateFooter(driver);
 	}
 
 }

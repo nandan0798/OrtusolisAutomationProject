@@ -6,10 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class SwitchToDistributor {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void DistributorSwitch(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
 //        Thread.sleep(5000);
+		System.out.println("Switch to distributor successfull");
 
 	}
 

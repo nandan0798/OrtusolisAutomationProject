@@ -6,10 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UsersClick {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void UsersData(WebDriver driver) throws InterruptedException {
 		 driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
 		   Thread.sleep(5000);
+		   System.out.println("Users Clicked successfully");
+		   AddUser user = new AddUser();
+		   user.UserAdding(driver);
 
 	}
 

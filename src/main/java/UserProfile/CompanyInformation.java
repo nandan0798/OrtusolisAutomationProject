@@ -6,11 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class CompanyInformation {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
-//        driver.findElement(By.name("ComapanyDetailssubmit")).click();
-//        Thread.sleep(5000);
+	public void Information(WebDriver driver) throws InterruptedException {
+		 driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
+         Thread.sleep(5000);
+         System.out.println("Company information Updated successfully");
+         PaymentDetails payinfo = new PaymentDetails();
+         payinfo.Details(driver);
+         
 
 	}
 

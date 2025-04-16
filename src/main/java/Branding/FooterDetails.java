@@ -4,10 +4,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Payout.PayoutClick;
+
 public class FooterDetails {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void UpdateFooter(WebDriver driver) throws InterruptedException {
 		driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
         Thread.sleep(5000);
         driver.findElement(By.id("PhoneNumber")).clear();
@@ -18,7 +19,9 @@ public class FooterDetails {
         
         Thread.sleep(4000);
         driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
-
+        System.out.println("Footer details updated successfully");
+        PayoutClick pay = new PayoutClick();
+        pay.PayDetails(driver);
 	}
 
 }

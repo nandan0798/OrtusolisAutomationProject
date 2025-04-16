@@ -6,11 +6,12 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AuthenticationClick {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void AuthClick(WebDriver driver) throws InterruptedException {
 		 driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
          Thread.sleep(4000);
-
+         System.out.println("Authentication clicked successfully");
+         Logout out = new Logout();
+         out.CheckedOut(driver);
 	}
 
 }

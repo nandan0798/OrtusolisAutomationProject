@@ -1,35 +1,37 @@
 package Users;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class AddUser {
 
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
+	public void UserAdding(WebDriver driver) throws InterruptedException {
 		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
 		   Thread.sleep(5000);
 		   //Add user
 		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
 		   Thread.sleep(5000);
 		   
-//		   //User Role Distributor
-//		   driver.findElement(By.xpath("//*[@name='userRole']//option[contains(text(),'Distributor')]")).click();
-//		   //First Name
-//		driver.findElement(By.id("userFirstName")).sendKeys("Sandesh");
-//		//Last Name
-//		driver.findElement(By.id("userLastName")).sendKeys("Developer");
-//		//Phone number
-//		driver.findElement(By.id("userPhoneNumber")).sendKeys("9938374841");
-//		//Email Id
-//		driver.findElement(By.id("userEmailId")).sendKeys("sda@gmail.com");
-//		//Password
-//		driver.findElement(By.id("userPassword")).sendKeys("123");
-//		//ADD Button
-//		WebElement addButton = driver.findElement(By.id("addUser"));
-//		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addButton);
-//		Thread.sleep(5000); 
+		   //User Role Distributor
+		   driver.findElement(By.xpath("//*[@name='userRole']//option[contains(text(),'Distributor')]")).click();
+		   //First Name
+		driver.findElement(By.id("userFirstName")).sendKeys("Girish");
+		//Last Name
+		driver.findElement(By.id("userLastName")).sendKeys("eVENKART");
+		//Phone number
+		driver.findElement(By.id("userPhoneNumber")).sendKeys("9938374856");
+		//Email Id
+		driver.findElement(By.id("userEmailId")).sendKeys("gi@gmail.com");
+		//Password
+		driver.findElement(By.id("userPassword")).sendKeys("123");
+		//ADD Button
+		WebElement addButton = driver.findElement(By.id("addUser"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].click();", addButton);
+		Thread.sleep(5000); 
+		System.out.println("Distributor added successfully");
 		   
 
 //		   //Distributor approve table 
@@ -49,6 +51,8 @@ public class AddUser {
 //		driver.findElement(By.xpath("//div[@class='dropdown-menu show']//a[@class='dropdown-item'][normalize-space()='Approve']")).click();
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes, Approve']")).click();
 //		Thread.sleep(4000);
+		ModifyUser mod = new ModifyUser();
+		mod.moduser(driver);
 	}
 
 }

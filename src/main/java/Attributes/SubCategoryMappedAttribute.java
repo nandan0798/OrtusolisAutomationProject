@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import Users.UsersClick;
+
 public class SubCategoryMappedAttribute {
 
 	public void DeleteAttributes(WebDriver driver) throws InterruptedException {
@@ -31,6 +33,8 @@ public class SubCategoryMappedAttribute {
 		   driver.findElement(By.xpath("//button[normalize-space()='Delete']")).click();
 		   driver.findElement(By.xpath("//button[normalize-space()='Yes, Delete']")).click();
 		   System.out.println("Deleted attribute successfully");
+		   UsersClick click = new UsersClick();
+		   click.UsersData(driver);
 
 	}
 
