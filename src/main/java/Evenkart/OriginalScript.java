@@ -134,10 +134,10 @@ public class OriginalScript {
 ////        Thread.sleep(2000);  // Wait for File Upload Dialog to Open
 //	
 ////		Thread.sleep(5000);
-////		Attributes Feature
-//	        driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
-//	        Thread.sleep(3000);
-//	        
+//		Attributes Feature
+	        driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
+	        Thread.sleep(3000);
+	        
 //	       
 //		//Attribute Management 
 //		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
@@ -189,32 +189,32 @@ public class OriginalScript {
 //	   driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 //	   Thread.sleep(4000); 
 //	
-//	//Sub Category Attribute Mapping 
-//	  driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
-//   Thread.sleep(6000);
-//	  
-//	  //Select Category
-//	  driver.findElement(By.xpath("//select[@id='attributecategory']//option[contains(text(),'Testing Category')]")).click();
-//	  Thread.sleep(7000);
-//	  
-//	  //Select SubCategory 
-//	  driver.findElement(By.xpath("//select[@id='attributesubcategory']//option[contains(text(),'TestSubCategory')]")).click();
-//	  Thread.sleep(7000);
-//	  
-//	  //Get Attributes 
-//	  driver.findElement(By.id("updateattributesubmapping")).click();
-//	  Thread.sleep(6000);
-//	   
-//	   //Sub Category Map 
-//   driver.findElement(By.xpath("//select[@name='unmappedproductstable_length']")).sendKeys("All");
-//   Thread.sleep(3000);
-//     WebElement Map = driver.findElement(By.id("search_input_all"));
-//       Map.sendKeys("Company");
-//       Map.click();
-//       Thread.sleep(4000);
-//       driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
-//       Thread.sleep(5000); 
-//	
+	//Sub Category Attribute Mapping 
+	  driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
+   Thread.sleep(6000);
+	  
+	  //Select Category
+	  driver.findElement(By.xpath("//select[@id='attributecategory']//option[contains(text(),'Testing Category')]")).click();
+	  Thread.sleep(7000);
+	  
+	  //Select SubCategory 
+	  driver.findElement(By.xpath("//select[@id='attributesubcategory']//option[contains(text(),'TestSubCategory')]")).click();
+	  Thread.sleep(7000);
+	  
+	  //Get Attributes 
+	  driver.findElement(By.id("updateattributesubmapping")).click();
+	  Thread.sleep(6000);
+	   
+	   //Sub Category Map 
+   driver.findElement(By.xpath("//select[@name='unmappedproductstable_length']")).sendKeys("All");
+   Thread.sleep(3000);
+     WebElement Map = driver.findElement(By.id("search_input_all"));
+       Map.sendKeys("Company");
+       Map.click();
+       Thread.sleep(4000);
+       driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
+       Thread.sleep(5000); 
+	
 //	//Sub Category Mapped Attribute 
 //	driver.findElement(By.xpath("//span[normalize-space()='Sub Category Mapped Attribute']")).click();
 //	Thread.sleep(6000); 
@@ -421,23 +421,23 @@ public class OriginalScript {
 //	//		         driver.findElement(By.xpath("//button[@id='update']")).click();
 //	//		         Thread.sleep(4000);
 		        
-		        
-		         //User Profile(Didn't work need to fix this by me)
-		         driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
-		         Thread.sleep(5000);
-		         
-		         //Account/Profile
-		         driver.findElement(By.xpath("//button[@id='updateProfileDetails']")).click();
-		         Thread.sleep(4000);
-		         
-		         //company information 
-		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
-		         Thread.sleep(5000);
-		         
-		         //payment details
-		         driver.findElement(By.xpath("//button[@id='UpdatePaymentId']")).click();
-		         Thread.sleep(5000);
-		         
+//		        
+//		         //User Profile(Didn't work need to fix this by me)
+//		         driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
+//		         Thread.sleep(5000);
+//		         
+//		         //Account/Profile
+//		         driver.findElement(By.xpath("//button[@id='updateProfileDetails']")).click();
+//		         Thread.sleep(4000);
+//		         
+//		         //company information 
+//		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
+//		         Thread.sleep(5000);
+//		         
+//		         //payment details
+//		         driver.findElement(By.xpath("//button[@id='UpdatePaymentId']")).click();
+//		         Thread.sleep(5000);
+//		         
 		         
 		         //Authentication
 		         driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
