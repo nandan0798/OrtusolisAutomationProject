@@ -51,7 +51,7 @@ public class SubCategory {
              
              //Calling another class
              Products products = new Products();
-             products.ProductsData(driver);
+             products.productsData(driver);
 			}catch(Exception e) {
 				throw new Exception(e.getMessage());
 			}

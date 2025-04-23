@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class AttributesClick {
 
-	public void AttributesData(WebDriver driver) throws Exception {
+	public void attributesData(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
 	        Thread.sleep(3000);

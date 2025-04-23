@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 
 public class Products {
 
-	public void ProductsData(WebDriver driver) throws Exception {
+	public void productsData(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
 	         Thread.sleep(6000);
@@ -21,7 +21,7 @@ public class Products {
 	    
 	    //Calling another class
 	    RatingsAndReview ratingsData = new RatingsAndReview();
-	    ratingsData.Reviews(driver);
+	    ratingsData.reviews(driver);
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		 

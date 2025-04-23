@@ -9,7 +9,7 @@ import Attributes.AttributesClick;
 
 public class RatingsAndReview {
 
-	public void Reviews(WebDriver driver) throws Exception {
+	public void reviews(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
 	         Thread.sleep(6000);
@@ -19,7 +19,7 @@ public class RatingsAndReview {
 	         
 	         //calling another class
 	         AttributesClick attribute = new AttributesClick();
-	         attribute.AttributesData(driver);
+	         attribute.attributesData(driver);
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		 
