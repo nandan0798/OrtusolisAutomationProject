@@ -7,13 +7,14 @@ import ProductFlow.ProductFlowClick;
 
 public class Dashboard {
 	
-	public void DashboardClick(WebDriver driver) throws Exception {
+	public void dashboardClick(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
 			System.out.println("Dashboard action successful");
 			
+			//calling another class
 			ProductFlowClick product = new ProductFlowClick();
-			product.FlowClick(driver);
+			product.flowClick(driver);
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		}

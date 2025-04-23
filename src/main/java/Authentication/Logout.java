@@ -15,7 +15,7 @@ public class Logout {
 	        
 	        //calling another class
 //	        SwitchToDistributor switchtodistributor = new SwitchToDistributor();
-//        switchtodistributor.distributorSwitch(driver);
+//       switchtodistributor.distributorSwitch(driver);
 		}catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
