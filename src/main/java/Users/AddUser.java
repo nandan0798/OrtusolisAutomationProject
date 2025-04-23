@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class AddUser {
 
 	public void UserAdding(WebDriver driver) throws InterruptedException {
-		   driver.findElement(By.xpath("//span[normalize-space()='Users']")).click();
-		   Thread.sleep(5000);
 		   //Add user
 		   driver.findElement(By.xpath("//span[normalize-space()='Add User']")).click();
 		   Thread.sleep(5000);
