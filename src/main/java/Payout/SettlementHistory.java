@@ -2,14 +2,15 @@ package Payout;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 import UserProfile.UserProfileClick;
 
 public class SettlementHistory {
 
-	public void History(WebDriver driver) throws InterruptedException {
-		   driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
+	public void history(WebDriver driver) throws Exception {
+		try {
+			driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
 			//		         Thread.sleep(4000);
 			//		         //select distributor
 			//		         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
@@ -22,8 +23,14 @@ public class SettlementHistory {
 			//		         driver.findElement(By.xpath("//button[@id='update']")).click();
 //					         Thread.sleep(4000);
 		   System.out.println("Settlement history displayed successful");
+		   
+		   //calling another class
 		   UserProfileClick Profile = new UserProfileClick();
-		   Profile.ProfileClick(driver);
+		   Profile.profileClick(driver);
+		   
+		}catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
 		   
 		   
 		   

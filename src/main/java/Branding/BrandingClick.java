@@ -2,16 +2,24 @@ package Branding;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+
 
 public class BrandingClick {
 
-	public void Ban(WebDriver driver) throws InterruptedException {
-		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
-		Thread.sleep(4000);
-		System.out.println("Branding clicked successfully");
-		BannerDetails details = new BannerDetails();
-		details.Update(driver);
+	public void ban(WebDriver driver) throws Exception {
+		try {
+			driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
+			Thread.sleep(4000);
+			System.out.println("Branding clicked successfully");
+			
+			//Calling another class
+			BannerDetails details = new BannerDetails();
+			details.addBanner(driver);
+		}catch (Exception e) {
+			throw new Exception(e.getMessage());
+		}
+		
+		
 
 	}
 
