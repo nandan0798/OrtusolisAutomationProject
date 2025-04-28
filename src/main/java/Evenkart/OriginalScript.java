@@ -135,26 +135,28 @@ public class OriginalScript {
 ////        Thread.sleep(2000);  // Wait for File Upload Dialog to Open
 //	
 ////		Thread.sleep(5000);
+		
+		
 //		Attributes Feature
-//	        driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
-//	        Thread.sleep(3000);
-//	        
-//	       
-//		//Attribute Management 
+	        driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
+	        Thread.sleep(3000);
+	        
+	       
+		//Attribute Management 
 //		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
 //		
-////		//Attribute Key Name
-////		driver.findElement(By.id("attributekey1")).sendKeys("Company");
-////		//Attribute Key Description 
-////		driver.findElement(By.id("attributedescription1")).sendKeys("Work Related");
-////		//ADD button
-////		driver.findElement(By.id("Addattributekey")).click();
-//		
-//		
-//		//Table search to update or delete attribute key
-////	driver.findElement(By.id("search_input_all")).sendKeys("Company");
-////		Thread.sleep(4000);
-//		//Show table
+//		//Attribute Key Name
+//		driver.findElement(By.id("attributekey1")).sendKeys("Company");
+//		//Attribute Key Description 
+//		driver.findElement(By.id("attributedescription1")).sendKeys("Work Related");
+//		//ADD button
+//		driver.findElement(By.id("Addattributekey")).click();
+		
+		
+		//Table search to update or delete attribute key
+//	driver.findElement(By.id("search_input_all")).sendKeys("Company");
+//		Thread.sleep(4000);
+		//Show table
 //		WebElement Show =driver.findElement(By.xpath("//select[@name='attributemanagementTable_length']"));
 //		Show.sendKeys("All");
 //		Show.click();
@@ -167,9 +169,9 @@ public class OriginalScript {
 //		driver.findElement(By.xpath("//a[@id='updtattrikey54']")).click();
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 //		Thread.sleep(4000);
-//	
+	
 //	//Attribute Mapping 
-//	
+	
 //		driver.findElement(By.xpath("//span[normalize-space()='Attribute Mapping']")).click();
 //		Thread.sleep(3000);
 //////		//Attribute Key Name
@@ -192,7 +194,7 @@ public class OriginalScript {
 //	
 //	//Sub Category Attribute Mapping 
 //	  driver.findElement(By.xpath("//span[normalize-space()='Sub Category Attribute Mapping']")).click();
-//   Thread.sleep(6000);
+//   Thread.sleep(7000);
 //	  
 //	  //Select Category
 //	  driver.findElement(By.xpath("//select[@id='attributecategory']//option[contains(text(),'Testing Category')]")).click();
@@ -215,7 +217,7 @@ public class OriginalScript {
 //       Thread.sleep(4000);
 //       driver.findElement(By.xpath("//tbody/tr[39]/td[4]/div[1]/button[1]")).click();
 //       Thread.sleep(5000); 
-	
+//	
 //	//Sub Category Mapped Attribute 
 //	driver.findElement(By.xpath("//span[normalize-space()='Sub Category Mapped Attribute']")).click();
 //	Thread.sleep(6000); 
@@ -424,32 +426,32 @@ public class OriginalScript {
 		        
 //		        
 //		         //User Profile
-		         driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
-		         Thread.sleep(6000);
-		         
-		         //Account/Profile
-		         driver.findElement(By.xpath("//button[@id='updateProfileDetails']")).click();
-		         Thread.sleep(4000);
-		         
-		         //company information 
-		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
-		         Thread.sleep(3000);
-		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
-		         Thread.sleep(5000);
-		         driver.findElement(By.xpath("//div[@id='modal-company']//i[@class='mdi mdi-close']")).click();
-		       
-		         //payment details
-		         driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
-		         Thread.sleep(3000);
-		         driver.findElement(By.xpath("//button[@id='UpdatePaymentId']")).click();
-		         Thread.sleep(5000);
-		         
-		         
-		         //Authentication
-		         driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
-		         Thread.sleep(4000);
-		         driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
-		         Thread.sleep(4000);
+//		         driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
+//		         Thread.sleep(6000);
+//		         
+//		         //Account/Profile
+//		         driver.findElement(By.xpath("//button[@id='updateProfileDetails']")).click();
+//		         Thread.sleep(4000);
+//		         
+//		         //company information 
+//		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
+//		         Thread.sleep(3000);
+//		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
+//		         Thread.sleep(5000);
+//		         driver.findElement(By.xpath("//div[@id='modal-company']//i[@class='mdi mdi-close']")).click();
+//		       
+//		         //payment details
+//		         driver.findElement(By.xpath("//a[normalize-space()='Payment Deatils']")).click();
+//		         Thread.sleep(3000);
+//		         driver.findElement(By.xpath("//button[@id='UpdatePaymentId']")).click();
+//		         Thread.sleep(5000);
+//		         
+//		         
+//		         //Authentication
+//		         driver.findElement(By.xpath("//span[normalize-space()='Authentication']")).click();
+//		         Thread.sleep(4000);
+//		         driver.findElement(By.xpath("//span[normalize-space()='Logout']")).click();
+//		         Thread.sleep(4000);
 //		         driver.findElement(By.xpath("//span[normalize-space()='Switch To Distributor']")).click();
 //		         Thread.sleep(5000);
 		        
