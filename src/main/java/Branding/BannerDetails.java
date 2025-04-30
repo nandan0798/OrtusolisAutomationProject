@@ -46,10 +46,10 @@ public class BannerDetails {
 		
 		
 		        // Add a small delay to ensure scrolling is complete (optional)
-			        Thread.sleep(3000);
-		        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
+//			        Thread.sleep(3000);
+//		        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
 			        
-//			        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
+			        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
 			        driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
 			        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 			        Thread.sleep(4000);

@@ -9,7 +9,7 @@ public class BrandingClick {
 	public void ban(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
-			Thread.sleep(4000);
+			Thread.sleep(5000);
 			System.out.println("Branding clicked successfully");
 			
 			//Calling another class

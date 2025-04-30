@@ -352,11 +352,14 @@ public class OriginalScript {
 //		
 //		
 //		//Branding 
-//		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
-//		Thread.sleep(4000);
-//		//Banner details
-//		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
-//		//Banner content
+		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
+		Thread.sleep(4000);
+		//Banner details
+		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
+		Thread.sleep(4000);
+		
+		
+		//		//Banner content
 ////		driver.findElement(By.name("text")).sendKeys("Testing Banner");
 //		//Banner image link
 ////		driver.findElement(By.id("bannerImageLink")).sendKeys("Test Banner");
@@ -376,23 +379,25 @@ public class OriginalScript {
 ////		
 ////	        // Click the radio button
 //		
-//		   //Update or delete Banner 
-//		driver.findElement(By.id("search_input_all")).sendKeys("Banner");
-//        Thread.sleep(7000);
-//		WebElement radioButton = driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]"));
-//		        // Scroll to the radio button
-//		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
-//	
-//	
-//	        // Add a small delay to ensure scrolling is complete (optional)
-//		        Thread.sleep(3000);
-//	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
-//		        
-////		        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
-//		        driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
-//		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
-//		        Thread.sleep(4000);
-//		        
+		   //Update or delete Banner 
+		WebElement search = driver.findElement(By.id("search_input_all"));
+		search.sendKeys("Banner");
+		search.click();
+        Thread.sleep(5000);
+		WebElement radioButton = driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]"));
+		        // Scroll to the radio button
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
+		        
+	
+	        // Add a small delay to ensure scrolling is complete (optional)
+		        Thread.sleep(3000);
+	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
+		        
+//		        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
+		        driver.findElement(By.id("updtbanner378")).click();
+		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
+		        Thread.sleep(4000);
+		        
 //		        //Footer
 //		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
 //		        Thread.sleep(5000);
