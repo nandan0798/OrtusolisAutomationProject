@@ -38,19 +38,21 @@ public class BannerDetails {
 	private void updateBanner(WebDriver driver)throws Exception {
 		try {
 			 //Update or delete Banner 
-			driver.findElement(By.id("search_input_all")).sendKeys("Banner");
-	        Thread.sleep(7000);
+			WebElement search = driver.findElement(By.id("search_input_all"));
+			search.sendKeys("Banner");
+			search.click();
+	        Thread.sleep(5000);
 			WebElement radioButton = driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]"));
 			        // Scroll to the radio button
 			        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
 		
 		
 		        // Add a small delay to ensure scrolling is complete (optional)
-//			        Thread.sleep(3000);
-//		        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
+			        Thread.sleep(3000);
+		        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
 			        
-			        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
-			        driver.findElement(By.xpath("//a[@id='updtbanner377']")).click();
+//			        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
+			        driver.findElement(By.id("updtbanner378")).click();
 			        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 			        Thread.sleep(4000);
 			        System.out.println("Banner updated successfully");
