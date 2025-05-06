@@ -379,37 +379,36 @@ public class OriginalScript {
 ////		
 ////	        // Click the radio button
 //		
-		   //Update or delete Banner 
-		WebElement search = driver.findElement(By.id("search_input_all"));
-		search.sendKeys("Banner");
-		search.click();
-        Thread.sleep(5000);
-		WebElement radioButton = driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]"));
-		        // Scroll to the radio button
-		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
-		        
-	
-	        // Add a small delay to ensure scrolling is complete (optional)
-		        Thread.sleep(3000);
-	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
-		        
-//		        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
-		        driver.findElement(By.id("updtbanner378")).click();
-		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
-		        Thread.sleep(4000);
-		        
-//		        //Footer
-//		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
-//		        Thread.sleep(5000);
-//		        driver.findElement(By.id("PhoneNumber")).clear();
-//		        driver.findElement(By.id("EmailId")).clear();
+//		   //Update or delete Banner 
+//		WebElement search = driver.findElement(By.id("search_input_all"));
+//		search.sendKeys("Banner");
+//		search.click();
+//        Thread.sleep(5000);
+//		WebElement radioButton = driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]"));
+//		        // Scroll to the radio button
+//		        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView({block: 'center'});", radioButton);
+//		        
+//	
+//	        // Add a small delay to ensure scrolling is complete (optional)
 //		        Thread.sleep(3000);
-//		        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
-//		        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
+//	        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", radioButton);
 //		        
+//		        driver.findElement(By.id("updtbanner378")).click();
+//		        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
 //		        Thread.sleep(4000);
-//		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
-//		        
+		        
+		        //Footer
+		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
+		        Thread.sleep(5000);
+		        driver.findElement(By.id("PhoneNumber")).clear();
+		        driver.findElement(By.id("EmailId")).clear();
+		        Thread.sleep(3000);
+		        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
+		        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
+		        
+		        Thread.sleep(4000);
+		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
+		        
 //			        //payout
 //			        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
 //			        Thread.sleep(5000);

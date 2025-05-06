@@ -18,9 +18,10 @@ public class FooterDetails {
 	        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
 	        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
 	        
-	        Thread.sleep(4000);
+	        Thread.sleep(7000);
 	        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
 	        System.out.println("Footer details updated successfully");
+	        Thread.sleep(7000);
 	        
 	        //calling another class
 	        PayoutClick pay = new PayoutClick();

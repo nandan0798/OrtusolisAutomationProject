@@ -11,6 +11,7 @@ public class BannerDetails {
 	public void addBanner(WebDriver driver) throws Exception {
 		try {
 			driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
+			Thread.sleep(4000);
 			//Banner content
 //			driver.findElement(By.name("text")).sendKeys("Testing Banner");
 			//Banner image link
@@ -54,7 +55,7 @@ public class BannerDetails {
 //			        driver.findElement(By.xpath("//tbody/tr[5]/td[5]/div[1]/button[2]")).click();
 			        driver.findElement(By.id("updtbanner378")).click();
 			        driver.findElement(By.xpath("//button[normalize-space()='Yes, Update']")).click();
-			        Thread.sleep(4000);
+			        Thread.sleep(7000);
 			        System.out.println("Banner updated successfully");
 			        
 			        //calling another class
