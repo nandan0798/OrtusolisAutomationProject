@@ -31,9 +31,9 @@ public class OriginalScript {
 		driver.findElement(By.cssSelector("button[type='submit']")).click();
 		Thread.sleep(5000);	
 		
-//		//Product flow
-//	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-//	Thread.sleep(5000); 
+		//Product flow
+	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
+	Thread.sleep(5000); 
 	              
 	
 //	//Category (Add Category)
@@ -115,18 +115,18 @@ public class OriginalScript {
 //             Thread.sleep(5000);
 //             
 //		
-//       //Products
-//         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
-//	         Thread.sleep(6000);
-//	        
-//	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-//	         Thread.sleep(7000);
-//	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
-//         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
-//	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
-//        Thread.sleep(7000);
-//	driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-//		Thread.sleep(7000);
+       //Products
+         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
+	         Thread.sleep(6000);
+	        
+	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+	         Thread.sleep(7000);
+	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
+         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
+	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
+        Thread.sleep(7000);
+	driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
+		Thread.sleep(7000);
 	
 //		
 //	         //Ratings and reviews
