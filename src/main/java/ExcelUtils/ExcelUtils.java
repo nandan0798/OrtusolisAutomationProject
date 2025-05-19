@@ -35,6 +35,13 @@ public class ExcelUtils {
         workbook.write(fos);
         fos.close();
     }
+    
+    public void save() throws IOException {
+        try (FileOutputStream fos = new FileOutputStream(filePath)) {
+            workbook.write(fos);
+        }
+    }
+
 
     public void closeWorkbook() throws IOException {
         workbook.close();
