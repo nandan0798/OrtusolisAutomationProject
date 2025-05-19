@@ -41,6 +41,11 @@ public class ExcelUtils {
             workbook.write(fos);
         }
     }
+ 
+    public int getRowCount(String sheetName) {
+        Sheet sheet = workbook.getSheet(sheetName);
+        return sheet.getPhysicalNumberOfRows();
+    }
 
 
     public void closeWorkbook() throws IOException {
