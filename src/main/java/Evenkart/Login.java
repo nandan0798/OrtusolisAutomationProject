@@ -30,6 +30,8 @@ public class Login {
                 String password = excel.getCellData(i, 1);
 
                 driver.findElement(By.name("email")).sendKeys(email);
+                
+                
                 driver.findElement(By.name("password")).sendKeys(password);
                 driver.findElement(By.name("remember")).click();
                 driver.findElement(By.cssSelector("button[type='submit']")).click();
