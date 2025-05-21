@@ -32,8 +32,8 @@ public class OriginalScript {
 		Thread.sleep(5000);	
 		
 		//Product flow
-	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-	Thread.sleep(5000); 
+//	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
+//	Thread.sleep(5000); 
 	              
 	
 //	//Category (Add Category)
@@ -116,17 +116,17 @@ public class OriginalScript {
 //             
 //		
        //Products
-         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
-	         Thread.sleep(6000);
-	        
-	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-	         Thread.sleep(7000);
-	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
-         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
-	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
-        Thread.sleep(7000);
-	driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
-		Thread.sleep(7000);
+//         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
+//	         Thread.sleep(6000);
+//	        
+//	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+//	         Thread.sleep(7000);
+//	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
+//         driver.findElement(By.xpath("//a[@id='activeBTn \"09a888c3-9cdd-45ea-9af3-94740b502895\"']")).click();
+//	         driver.findElement(By.xpath("//button[normalize-space()='Yes, Activate']")).click();
+//        Thread.sleep(7000);
+//	driver.findElement(By.xpath("//a[normalize-space()='Home']")).click();
+//		Thread.sleep(7000);
 	
 //		
 //	         //Ratings and reviews
@@ -312,20 +312,20 @@ public class OriginalScript {
 //		   
 //	
 //		
-////		//Reports click 
-////		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
-////		Thread.sleep(3000);
-//		   
-//		  
+//		//Reports click 
+		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
+		Thread.sleep(3000);
+		   
+		  
 ////		//Product Transaction Report
-////		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
-////		Thread.sleep(3000);
-//		   
-//		   
-////		//Select distributor from loader
-////		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
-////		Thread.sleep(3000);
-//		
+		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
+		Thread.sleep(3000);
+		
+    //Select distributor from loader
+		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
+		Thread.sleep(3000);
+		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
+		
 ////		//order report click
 ////		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
 ////		Thread.sleep(3000);
