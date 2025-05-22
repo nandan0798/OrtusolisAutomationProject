@@ -12,7 +12,7 @@ public class Settlement {
 	        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
 	        Thread.sleep(4000);
 	        //select settlement distributor
-	        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
+	        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
 	         Thread.sleep(5000);
 	         System.out.println("Distributor Settlement shown successful");
 	         
