@@ -6,10 +6,20 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ReportsClick {
 
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
+	public void reportsData (WebDriver driver)throws Exception {
+		try {
 		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
-//		Thread.sleep(3000);
+		Thread.sleep(3000);
+		System.out.println("Reports click successfully");
+		
+		//calling another class 
+		ProductTransactionReport productTransactionReportClick = new ProductTransactionReport();
+		productTransactionReportClick.productTransactionReportClick(driver);
+		}catch(Exception e) {
+			throw new Exception(e.getMessage());
+		}
+		
+		
 
 	}
 

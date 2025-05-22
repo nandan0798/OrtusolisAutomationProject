@@ -6,8 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class OrderReport {
 
-	public static void main(String[] args) {
-		WebDriver driver = new ChromeDriver();
+	public void orderData(WebDriver driver)throws Exception {
+		try {
 		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
 //		Thread.sleep(3000);
 //		//start date 
@@ -19,17 +19,31 @@ public class OrderReport {
 //		WebElement end = driver.findElement(By.xpath("//input[@id='OrderReportEndDate']"));
 //		 end.sendKeys("03/02/2025");
 //		 end.click();
+		
+		
 //	   //Select status
 //	   Thread.sleep(3000);
 //	   driver.findElement(By.xpath("//input[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
+		
+		
 //	   //Select distributor 
 //	   driver.findElement(By.xpath("//input[@name='orderdistributorId']//option[contains(text(),'Astra Designs')]")).click();
 //	   Thread.sleep(3000);
+		
 //	   //Generate pdf 
 //	   driver.findElement(By.id("ordertablepdf")).click();
 //	   Thread.sleep(4000); 
 		
-		//Entire reports feature is having issue java team has fixed but needs to push
+		//Entire reports feature is having issue java team has fixed but needs to push 
+		
+		//calling another class
+		CustomerLedgerReport customerData = new CustomerLedgerReport();
+		customerData.customerData(driver);
+		
+		
+		}catch(Exception e) {
+			throw new Exception(e.getMessage());
+		}
 
 	}
 
