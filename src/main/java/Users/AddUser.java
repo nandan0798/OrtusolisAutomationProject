@@ -42,7 +42,7 @@ public class AddUser {
 //				   //Distributor approve table 
 //				   
 //				WebElement distributor = driver.findElement(By.xpath("//input[@type='search']"));
-//				distributor.sendKeys("prajwal");
+//				distributor.sendKeys("Sandesh");
 //				distributor.click();
 //				Thread.sleep(3000);
 		//
