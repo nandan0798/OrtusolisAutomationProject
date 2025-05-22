@@ -16,6 +16,8 @@ public class AttributesClick {
 	        AttributeManagement manage = new AttributeManagement();
 	        manage.attributesmap(driver);
 	        System.out.println("Attributes added successfully");
+	        
+	        
 		}catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}

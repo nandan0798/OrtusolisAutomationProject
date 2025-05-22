@@ -15,6 +15,8 @@ public class ReportsClick {
 		//calling another class 
 		ProductTransactionReport productTransactionReportClick = new ProductTransactionReport();
 		productTransactionReportClick.productTransactionReportClick(driver);
+		
+		
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		}

@@ -4,7 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import Branding.BrandingClick;
+
+import Reports.ReportsClick;
 
 public class ModifyUser {
 
@@ -33,8 +34,9 @@ public class ModifyUser {
 	// Reports feature is not working still , so only have jumped to Branding feature 
 			 
 			 //calling another class
-			 BrandingClick brandingdata = new BrandingClick();
-			 brandingdata.ban(driver);
+			   ReportsClick reportsClick = new ReportsClick();
+			   reportsClick.reportsData(driver);
+			   
 			 
 			 
 		}catch (Exception e) {
