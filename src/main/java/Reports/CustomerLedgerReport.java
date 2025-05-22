@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import Branding.BannerDetails;
+
 public class CustomerLedgerReport {
 
 	public void customerData(WebDriver driver)throws Exception {
@@ -36,6 +38,12 @@ public class CustomerLedgerReport {
 			//Get Report
 			driver.findElement(By.id("CustomerLedgerReportId")).click();
 			System.out.println("Ledger report generated successfully");
+			
+			//calling another class 
+			BannerDetails bannerDetails = new BannerDetails();
+			bannerDetails.addBanner(driver);
+		
+			
 		}catch(Exception e) {
 			throw new Exception(e.getMessage());
 		}

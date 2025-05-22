@@ -43,6 +43,8 @@ public class Login {
                 	    if (!currentUrl.contains("sign-in.php")) {
                 	        excel.setCellData(i, 2, "Login Successful");
                 	        System.out.println("Login Successful for Row " + i);
+                	        Dashboard dashboard = new Dashboard();
+                            dashboard.dashboardClick(driver);
                 	    }
                 } catch (Exception e) {
                     excel.setCellData(i, 2, e.getMessage());
@@ -52,7 +54,7 @@ public class Login {
                 driver.quit();
             }
 
-            excel.save();
+            excel.save();            
 
         } catch (Exception e) {
             e.printStackTrace();

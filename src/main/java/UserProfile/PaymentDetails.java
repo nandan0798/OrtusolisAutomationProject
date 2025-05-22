@@ -68,6 +68,8 @@ public class PaymentDetails {
 			driver.findElement(By.xpath("//button[@id='UpdatePaymentId']")).click();
 	        Thread.sleep(5000);
 	        System.out.println("Payment details updated successfully");
+	        
+	        //Calling another class
 	        AuthenticationClick auth = new AuthenticationClick();
 	        auth.authClick(driver);
 		}catch (Exception e) {

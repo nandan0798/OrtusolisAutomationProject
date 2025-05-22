@@ -12,6 +12,7 @@ public class Dashboard {
 			driver.findElement(By.xpath("//span[normalize-space()='Dashboard']")).click();
 			System.out.println("Dashboard action successful");
 			
+			
 			//calling another class
 			ProductFlowClick product = new ProductFlowClick();
 			product.flowClick(driver);

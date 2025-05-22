@@ -9,7 +9,9 @@ import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class OriginalScript {
@@ -137,6 +139,8 @@ public class OriginalScript {
 //	         driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']")).click();
 //	         driver.findElement(By.id("showratingId151")).click();
 //	         driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
+//	         System.out.println("Review ratings activated successfully");
+//	         Thread.sleep(7000);
 	         
 //	         System.out.println("Review Rating is not present");(This needs to be used only when if there is no product)
 
@@ -149,7 +153,7 @@ public class OriginalScript {
 //		Attributes Feature
 //	        driver.findElement(By.xpath("//span[normalize-space()='Attributes']")).click();
 //	        Thread.sleep(3000);
-//	        
+	        
 	       
 		//Attribute Management 
 //		driver.findElement(By.xpath("//span[normalize-space()='Attribute Management']")).click();
@@ -317,10 +321,10 @@ public class OriginalScript {
 //	
 //		
 //		//Reports click 
-//		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
-//		Thread.sleep(3000);
-//		   
-//		  
+		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
+		Thread.sleep(3000);
+		   
+		  
 //////		//Product Transaction Report
 //		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
 //		Thread.sleep(3000);
@@ -330,28 +334,50 @@ public class OriginalScript {
 //		Thread.sleep(6000);
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
 		
-////		//order report click
-////		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
-////		Thread.sleep(3000);
-////		//start date 
-////		WebElement start = driver.findElement(By.xpath("//input[@id='OrderReportStartDate']"));
-////		start.sendKeys("02/03/2024");
-////		start.click();
-////		
-////		//end date
-////		WebElement end = driver.findElement(By.xpath("//input[@id='OrderReportEndDate']"));
-////		 end.sendKeys("03/02/2025");
-////		 end.click();
-////	   //Select status
-////	   Thread.sleep(3000);
-////	   driver.findElement(By.xpath("//input[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
-////	   //Select distributor 
-////	   driver.findElement(By.xpath("//input[@name='orderdistributorId']//option[contains(text(),'Astra Designs')]")).click();
-////	   Thread.sleep(3000);
-////	   //Generate pdf 
-////	   driver.findElement(By.id("ordertablepdf")).click();
-////	   Thread.sleep(4000);
-////	   
+		// Click Order Report
+		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
+		Thread.sleep(3000);
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+
+		// Wait for modal to disappear
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-container")));
+
+		// Set Start Date
+		WebElement startDate = driver.findElement(By.id("OrderReportStartDate"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", startDate, "2025-05-21");
+
+		// Set End Date
+		WebElement endDate = driver.findElement(By.id("OrderReportEndDate"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", endDate, "2025-05-22");
+
+		// Select Status
+		driver.findElement(By.xpath("//select[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
+
+		// Wait for distributor dropdown to load
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("orderdistributorId")));
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("orderdistributorId"), "Nandan ortusolis"));
+
+		// Select Distributor
+		WebElement distributorDropdown = driver.findElement(By.id("orderdistributorId"));
+		Select selectDistributor = new Select(distributorDropdown);
+		selectDistributor.selectByVisibleText("Nandan ortusolis");
+
+		// Wait for PDF checkbox and click it like a real user
+		WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("ordertablepdf")));
+		Actions actions = new Actions(driver);
+		actions.moveToElement(checkbox).click().perform();
+
+		// Wait for 'Get Report' button to be clickable and click
+		WebElement getReportBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("OrderReportIds")));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getReportBtn); // Scroll if needed
+		actions.moveToElement(getReportBtn).click().perform();
+
+		// Optional: wait for table data or confirmation
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='ordertable']//td")));
+
+
+	   
 //		//Entire reports feature is having issue java team has fixed but needs to push
 //		
 //		
@@ -469,7 +495,7 @@ public class OriginalScript {
 		Thread.sleep(4000);
 		System.out.println("Phone Number Updated Successfully");
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement updateButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("updateProfileDetails")));
 
 		System.out.println("Is update button enabled? " + updateButton.isEnabled());

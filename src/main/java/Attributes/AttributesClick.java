@@ -18,6 +18,7 @@ public class AttributesClick {
 	        System.out.println("Attributes added successfully");
 	        
 	        
+	        
 		}catch (Exception e) {
 			throw new Exception(e.getMessage());
 		}
