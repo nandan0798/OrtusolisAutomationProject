@@ -32,8 +32,8 @@ public class OriginalScript {
 		Thread.sleep(5000);	
 		
 		//Product flow
-	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-	Thread.sleep(5000); 
+//	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
+//	Thread.sleep(5000); 
 	              
 	
 //	//Category (Add Category)
@@ -130,13 +130,13 @@ public class OriginalScript {
 	
 //		
 //	         //Ratings and reviews
-	         driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
-	         Thread.sleep(6000);
-	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
-	         Thread.sleep(7000);
-	         driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']")).click();
-	         driver.findElement(By.id("showratingId151")).click();
-	         driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
+//	         driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
+//	         Thread.sleep(6000);
+//	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+//	         Thread.sleep(7000);
+//	         driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']")).click();
+//	         driver.findElement(By.id("showratingId151")).click();
+//	         driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
 	         
 //	         System.out.println("Review Rating is not present");(This needs to be used only when if there is no product)
 
@@ -317,18 +317,18 @@ public class OriginalScript {
 //	
 //		
 //		//Reports click 
-		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
-		Thread.sleep(3000);
-		   
-		  
-////		//Product Transaction Report
-		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
-		Thread.sleep(3000);
-		
-    //Select distributor from loader
-		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
-		Thread.sleep(6000);
-		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
+//		driver.findElement(By.xpath("//span[normalize-space()='Reports']")).click();
+//		Thread.sleep(3000);
+//		   
+//		  
+//////		//Product Transaction Report
+//		driver.findElement(By.xpath("//span[normalize-space()='Product Transaction Report']")).click();
+//		Thread.sleep(3000);
+//		
+//    //Select distributor from loader
+//		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
+//		Thread.sleep(6000);
+//		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
 		
 ////		//order report click
 ////		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
@@ -356,11 +356,11 @@ public class OriginalScript {
 //		
 //		
 //		//Branding 
-		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
-		Thread.sleep(4000);
-		//Banner details
-		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
-		Thread.sleep(4000);
+//		driver.findElement(By.xpath("//span[normalize-space()='Branding']")).click();
+//		Thread.sleep(4000);
+//		//Banner details
+//		driver.findElement(By.xpath("//span[normalize-space()='Banner Details']")).click();
+//		Thread.sleep(4000);
 		
 		
 		//		//Banner content
@@ -402,40 +402,42 @@ public class OriginalScript {
 //		        Thread.sleep(4000);
 		        
 		        //Footer
-		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
-		        Thread.sleep(5000);
-		        driver.findElement(By.id("PhoneNumber")).clear();
-		        driver.findElement(By.id("EmailId")).clear();
-		        Thread.sleep(3000);
-		        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
-		        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
-		        
-		        Thread.sleep(4000);
-		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
+//		        driver.findElement(By.xpath("//a[normalize-space()='Footer Details']")).click();
+//		        Thread.sleep(5000);
+//		        driver.findElement(By.id("PhoneNumber")).clear();
+//		        driver.findElement(By.id("EmailId")).clear();
+//		        Thread.sleep(3000);
+//		        driver.findElement(By.id("PhoneNumber")).sendKeys("8861097684");
+//		        driver.findElement(By.id("EmailId")).sendKeys("Nandannandhu3@gmail.com");
+//		        
+//		        Thread.sleep(4000);
+//		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
 		        
 //			        //payout
-//			        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
-//			        Thread.sleep(5000);
-//			        //Settlement
-//			        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
-//			        Thread.sleep(4000);
-//			        //select settlement distributor
-//			        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-//			         Thread.sleep(5000);
-//	//		        
-//	//		         //Settlement History
-//	//		         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
-//	//		         Thread.sleep(4000);
-//	//		         //select distributor
-//	//		         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
-//	//		         //select duration
-//	//		         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
-//	//		         //week calendar
-//	//		         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("13.2025");
-//	//		         Thread.sleep(4000);
-//	//		         //get settlement record
-//	//		         driver.findElement(By.xpath("//button[@id='update']")).click();
-//	//		         Thread.sleep(4000);
+			        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
+			        Thread.sleep(5000);
+			        //Settlement
+			        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
+			        Thread.sleep(4000);
+			        //select settlement distributor
+			        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+			         Thread.sleep(5000);
+			         System.out.println("Payment details displayed successfully");
+			        
+			         //Settlement History
+			         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
+			         Thread.sleep(4000);
+			         //select distributor
+			         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+			         //select duration
+			         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
+			         //week calendar
+			         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("21.2025");
+			         Thread.sleep(4000);
+			         //get settlement record
+			         driver.findElement(By.xpath("//button[@id='update']")).click();
+			         Thread.sleep(4000);
+			         System.out.println("Settlement record displayed successfully");
 		        
 		        
 		         //User Profile
