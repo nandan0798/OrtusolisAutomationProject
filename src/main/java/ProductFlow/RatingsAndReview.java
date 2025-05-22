@@ -15,7 +15,11 @@ public class RatingsAndReview {
 	         Thread.sleep(6000);
 	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
 	         Thread.sleep(7000);
-	         System.out.println("Review Rating is not present");
+	         driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']")).click();
+	         driver.findElement(By.id("showratingId151")).click();
+	         driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
+	         
+//	         System.out.println("Review Rating is not present");
 	         
 	         //calling another class
 	         AttributesClick attribute = new AttributesClick();

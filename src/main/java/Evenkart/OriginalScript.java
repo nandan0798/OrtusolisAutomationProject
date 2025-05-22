@@ -32,8 +32,8 @@ public class OriginalScript {
 		Thread.sleep(5000);	
 		
 		//Product flow
-//	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
-//	Thread.sleep(5000); 
+	driver.findElement(By.xpath("/html/body/div[3]/div[1]/div/div[2]/div[1]/div[2]/div/div/div/ul/li[2]/a/span")).click();
+	Thread.sleep(5000); 
 	              
 	
 //	//Category (Add Category)
@@ -118,7 +118,7 @@ public class OriginalScript {
        //Products
 //         driver.findElement(By.xpath("//span[normalize-space()='Products']")).click();
 //	         Thread.sleep(6000);
-//	        
+	        
 //	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Astra Designs')]")).click();
 //	         Thread.sleep(7000);
 //	         driver.findElement(By.xpath("//tbody/tr[1]/td[11]/div[1]/button[2]")).click();
@@ -130,12 +130,16 @@ public class OriginalScript {
 	
 //		
 //	         //Ratings and reviews
-//	         driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
-//	         Thread.sleep(6000);
-//	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
-//	         Thread.sleep(7000);
-//         
-//
+	         driver.findElement(By.xpath("//span[normalize-space()='Ratings and Reviews']")).click();
+	         Thread.sleep(6000);
+	         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+	         Thread.sleep(7000);
+	         driver.findElement(By.xpath("//button[@class='btn btn-outline-success dropdown-toggle dropdown-toggle-split']")).click();
+	         driver.findElement(By.id("showratingId151")).click();
+	         driver.findElement(By.xpath("//button[normalize-space()='OK']")).click();
+	         
+//	         System.out.println("Review Rating is not present");(This needs to be used only when if there is no product)
+
 //         
 ////        Thread.sleep(2000);  // Wait for File Upload Dialog to Open
 //	
@@ -323,7 +327,7 @@ public class OriginalScript {
 		
     //Select distributor from loader
 		driver.findElement(By.xpath("//select[@id='distributorId']/option[contains(text(),'Astra Designs')]")).click();
-		Thread.sleep(3000);
+		Thread.sleep(6000);
 		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
 		
 ////		//order report click
