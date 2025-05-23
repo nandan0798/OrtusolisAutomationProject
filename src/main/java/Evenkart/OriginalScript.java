@@ -334,47 +334,79 @@ public class OriginalScript {
 //		Thread.sleep(6000);
 //		driver.findElement(By.xpath("//button[normalize-space()='Yes']")).click();
 		
-		// Click Order Report
-		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
-		Thread.sleep(3000);
+//		// Click Order Report
+//		driver.findElement(By.xpath("//span[normalize-space()='Order Report']")).click();
+//		Thread.sleep(3000);
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+//
+//		// Wait for modal to disappear
+//		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-container")));
+//
+//		// Set Start Date
+//		WebElement startDate = driver.findElement(By.id("OrderReportStartDate"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", startDate, "2025-05-21");
+//
+//		// Set End Date
+//		WebElement endDate = driver.findElement(By.id("OrderReportEndDate"));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", endDate, "2025-05-22");
+//
+//		// Select Status
+//		driver.findElement(By.xpath("//select[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
+//
+//		// Wait for distributor dropdown to load
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("orderdistributorId")));
+//		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("orderdistributorId"), "Nandan ortusolis"));
+//
+//		// Select Distributor
+//		WebElement distributorDropdown = driver.findElement(By.id("orderdistributorId"));
+//		Select selectDistributor = new Select(distributorDropdown);
+//		selectDistributor.selectByVisibleText("Nandan ortusolis");
+//
+//		// Wait for PDF checkbox and click it like a real user
+//		WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("ordertablepdf")));
+//		Actions actions = new Actions(driver);
+//		actions.moveToElement(checkbox).click().perform();
+//
+//		// Wait for 'Get Report' button to be clickable and click
+//		WebElement getReportBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("OrderReportIds")));
+//		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getReportBtn); // Scroll if needed
+//		actions.moveToElement(getReportBtn).click().perform();
+//
+//		// Optional: wait for table data or confirmation
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='ordertable']//td")));
+		
+		// Click on Customer Ledger Report
+		driver.findElement(By.xpath("//span[normalize-space()='Customer Ledger Report']")).click();
 
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-
-		// Wait for modal to disappear
-		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.className("swal2-container")));
-
-		// Set Start Date
-		WebElement startDate = driver.findElement(By.id("OrderReportStartDate"));
+		// Set start date using JavaScript
+		WebElement startDate = driver.findElement(By.id("CustomerLedgerStartDate"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", startDate, "2025-05-21");
 
-		// Set End Date
-		WebElement endDate = driver.findElement(By.id("OrderReportEndDate"));
+		// Set end date using JavaScript
+		WebElement endDate = driver.findElement(By.id("CustomerLedgerEndDate"));
 		((JavascriptExecutor) driver).executeScript("arguments[0].value = arguments[1];", endDate, "2025-05-22");
+		Thread.sleep(5000);
 
-		// Select Status
-		driver.findElement(By.xpath("//select[@id='SelectStatusorderreport']//option[contains(text(),'All')]")).click();
+		//Select distributor
+		driver.findElement(By.xpath("//select[@id='customerdistributorId']//option[contains(text(),'Nandan ortusolis')]")).click();
 
-		// Wait for distributor dropdown to load
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.id("orderdistributorId")));
-		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.id("orderdistributorId"), "Nandan ortusolis"));
+	
+		//select status
+			driver.findElement(By.xpath("//select[@id='Selectstatus']//option[contains(text(),'All')]")).click();
+			Thread.sleep(6000);
 
-		// Select Distributor
-		WebElement distributorDropdown = driver.findElement(By.id("orderdistributorId"));
-		Select selectDistributor = new Select(distributorDropdown);
-		selectDistributor.selectByVisibleText("Nandan ortusolis");
-
-		// Wait for PDF checkbox and click it like a real user
-		WebElement checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.id("ordertablepdf")));
-		Actions actions = new Actions(driver);
-		actions.moveToElement(checkbox).click().perform();
-
-		// Wait for 'Get Report' button to be clickable and click
-		WebElement getReportBtn = wait.until(ExpectedConditions.elementToBeClickable(By.id("OrderReportIds")));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", getReportBtn); // Scroll if needed
-		actions.moveToElement(getReportBtn).click().perform();
-
-		// Optional: wait for table data or confirmation
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='ordertable']//td")));
+		
+		//select customer 
+		driver.findElement(By.xpath("//select[@id='SelectCustomer']//option[contains(text(),'Vishal P')]")).click();
+		Thread.sleep(3000);
+		
+		//Generate pdf
+		driver.findElement(By.id("CustomerLedgerReportPDFcheckboxTable")).click();
+		
+		//Get Report
+		driver.findElement(By.id("CustomerLedgerReportId")).click();
+		System.out.println("Ledger report generated successfully");
 
 
 	   
@@ -440,173 +472,173 @@ public class OriginalScript {
 //		        driver.findElement(By.xpath("//button[@id='UpdateFooterId']")).click();
 		        
 //			        //payout
-			        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
-			        Thread.sleep(5000);
-			        //Settlement
-			        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
-			        Thread.sleep(4000);
-			        //select settlement distributor
-			        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
-			         Thread.sleep(5000);
-			         System.out.println("Payment details displayed successfully");
-			        
-			         //Settlement History
-			         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
-			         Thread.sleep(4000);
-			         //select distributor
-			         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
-			         //select duration
-			         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
-			         //week calendar
-			         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("21.2025");
-			         Thread.sleep(4000);
-			         //get settlement record
-			         driver.findElement(By.xpath("//button[@id='update']")).click();
-			         Thread.sleep(4000);
-			         System.out.println("Settlement record displayed successfully");
+//			        driver.findElement(By.xpath("//span[normalize-space()='Payout']")).click();
+//			        Thread.sleep(5000);
+//			        //Settlement
+//			        driver.findElement(By.xpath("//span[normalize-space()='Settlement']")).click();
+//			        Thread.sleep(4000);
+//			        //select settlement distributor
+//			        driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+//			         Thread.sleep(5000);
+//			         System.out.println("Payment details displayed successfully");
+//			        
+//			         //Settlement History
+//			         driver.findElement(By.xpath("//span[normalize-space()='Settlement History']")).click();
+//			         Thread.sleep(4000);
+//			         //select distributor
+//			         driver.findElement(By.xpath("//*[@name='categories']//option[contains(text(),'Nandan ortusolis')]")).click();
+//			         //select duration
+//			         driver.findElement(By.xpath("//*[@id='settlementdistributorduration']//option[contains(text(),'Weekly')]")).click();
+//			         //week calendar
+//			         driver.findElement(By.xpath("//input[@id='camp-week']")).sendKeys("21.2025");
+//			         Thread.sleep(4000);
+//			         //get settlement record
+//			         driver.findElement(By.xpath("//button[@id='update']")).click();
+//			         Thread.sleep(4000);
+//			         System.out.println("Settlement record displayed successfully");
 		        
 		        
 		         //User Profile
-		driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
-		Thread.sleep(4000);
-
-		// Account/Profile
-		WebElement name = driver.findElement(By.id("userName"));
-		name.clear();
-		name.sendKeys("eMerge Emerg");
-		Thread.sleep(5000);
-		System.out.println("UserName");
-
-		WebElement firstname = driver.findElement(By.id("firstName"));
-		firstname.clear();
-		firstname.sendKeys("eMerge");
-		Thread.sleep(5000);
-		System.out.println("FirstName Updated Successfully");
-		
-		WebElement lastname = driver.findElement(By.id("lastName"));
-		lastname.clear();
-		lastname.sendKeys("Emerg");
-		Thread.sleep(5000);
-		System.out.println("LastName Updated Successfully");
-
-		WebElement number = driver.findElement(By.id("phoneNumber"));
-		number.clear();
-		number.sendKeys("8885000838");
-		Thread.sleep(4000);
-		System.out.println("Phone Number Updated Successfully");
-
-		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(10));
-		WebElement updateButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("updateProfileDetails")));
-
-		System.out.println("Is update button enabled? " + updateButton.isEnabled());
-		System.out.println("Is update button displayed? " + updateButton.isDisplayed());
-
-		// Scroll into view (optional)
-		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", updateButton);
-		Thread.sleep(1000);
-
-		// Try normal click first
-		try {
-		    updateButton.click();
-		    System.out.println("Clicked using normal click");
-		} catch (Exception e) {
-		    System.out.println("Normal click failed, trying Javascript click");
-		    ((JavascriptExecutor)driver).executeScript("arguments[0].click();", updateButton);
-		}
-
-		Thread.sleep(8000); // just to observe
-
-         
-		         //company information 
-		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
-		         Thread.sleep(5000);
-		         
-		        WebElement company =  driver.findElement(By.id("CompanyName"));
-		        company.clear();
-		        company.sendKeys("EMerge");
-		        Thread.sleep(4000);
-		        System.out.println("company name updated successfully");
-		        
-		        WebElement url = driver.findElement(By.id("CompanyUrl"));
-		        url.clear();
-		        url.sendKeys("http://emergindia.org/");
-		        Thread.sleep(4000);
-		        System.out.println("Company Url Updated successfully");
-		        
-		        
-		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
-		         Thread.sleep(5000);
-		         System.out.println("Company information updated successfully");
-		         Thread.sleep(4000);
-		         
-		      // Handle multiple alerts
-		         while (true) {
-		             try {
-		                 Alert alert = driver.switchTo().alert();
-		                 System.out.println("Alert Text: " + alert.getText());
-		                 alert.accept();
-		                 System.out.println("Alert accepted");
-		                 Thread.sleep(2000);
-		             } catch (NoAlertPresentException e) {
-		                 System.out.println("No more alerts");
-		                 break;
-		             }
-		         }
-
-		         Thread.sleep(7000);
+//		driver.findElement(By.xpath("//span[normalize-space()='User Profile']")).click();
+//		Thread.sleep(4000);
+//
+//		// Account/Profile
+//		WebElement name = driver.findElement(By.id("userName"));
+//		name.clear();
+//		name.sendKeys("eMerge Emerg");
+//		Thread.sleep(5000);
+//		System.out.println("UserName");
+//
+//		WebElement firstname = driver.findElement(By.id("firstName"));
+//		firstname.clear();
+//		firstname.sendKeys("eMerge");
+//		Thread.sleep(5000);
+//		System.out.println("FirstName Updated Successfully");
+//		
+//		WebElement lastname = driver.findElement(By.id("lastName"));
+//		lastname.clear();
+//		lastname.sendKeys("Emerg");
+//		Thread.sleep(5000);
+//		System.out.println("LastName Updated Successfully");
+//
+//		WebElement number = driver.findElement(By.id("phoneNumber"));
+//		number.clear();
+//		number.sendKeys("8885000838");
+//		Thread.sleep(4000);
+//		System.out.println("Phone Number Updated Successfully");
+//
+//		WebDriverWait waits = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		WebElement updateButton = wait.until(ExpectedConditions.elementToBeClickable(By.id("updateProfileDetails")));
+//
+//		System.out.println("Is update button enabled? " + updateButton.isEnabled());
+//		System.out.println("Is update button displayed? " + updateButton.isDisplayed());
+//
+//		// Scroll into view (optional)
+//		((JavascriptExecutor)driver).executeScript("arguments[0].scrollIntoView(true);", updateButton);
+//		Thread.sleep(1000);
+//
+//		// Try normal click first
+//		try {
+//		    updateButton.click();
+//		    System.out.println("Clicked using normal click");
+//		} catch (Exception e) {
+//		    System.out.println("Normal click failed, trying Javascript click");
+//		    ((JavascriptExecutor)driver).executeScript("arguments[0].click();", updateButton);
+//		}
+//
+//		Thread.sleep(8000); // just to observe
+//
+//         
+//		         //company information 
+//		         driver.findElement(By.xpath("//a[normalize-space()='Company Information']")).click();
+//		         Thread.sleep(5000);
+//		         
+//		        WebElement company =  driver.findElement(By.id("CompanyName"));
+//		        company.clear();
+//		        company.sendKeys("EMerge");
+//		        Thread.sleep(4000);
+//		        System.out.println("company name updated successfully");
+//		        
+//		        WebElement url = driver.findElement(By.id("CompanyUrl"));
+//		        url.clear();
+//		        url.sendKeys("http://emergindia.org/");
+//		        Thread.sleep(4000);
+//		        System.out.println("Company Url Updated successfully");
+//		        
+//		        
+//		         driver.findElement(By.xpath("//button[@id='ComapanyDetailssubmit']")).click();
+//		         Thread.sleep(5000);
+//		         System.out.println("Company information updated successfully");
+//		         Thread.sleep(4000);
+//		         
+//		      // Handle multiple alerts
+//		         while (true) {
+//		             try {
+//		                 Alert alert = driver.switchTo().alert();
+//		                 System.out.println("Alert Text: " + alert.getText());
+//		                 alert.accept();
+//		                 System.out.println("Alert accepted");
+//		                 Thread.sleep(2000);
+//		             } catch (NoAlertPresentException e) {
+//		                 System.out.println("No more alerts");
+//		                 break;
+//		             }
+//		         }
+//
+//		         Thread.sleep(7000);
 		         
 		       
 //		         //payment details
-		         WebDriverWait waitPayment = new WebDriverWait(driver, Duration.ofSeconds(10));
-		         WebElement paymentDetailsLink = waitPayment.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Payment Deatils']")));
-
-		         try {
-		             paymentDetailsLink.click();
-		             System.out.println("Clicked 'Payment Deatils' successfully.");
-		         } catch (Exception e) {
-		             System.err.println("Error clicking 'Payment Deatils': " + e.getMessage());
-		             // Optionally, you can try a JavaScript click as a fallback
-		             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", paymentDetailsLink);
-		             System.out.println("Tried clicking 'Payment Deatils' using JavaScript.");
-		         }
-
-		         Thread.sleep(3000);
-
-		         WebElement pay = driver.findElement(By.id("PaymentName"));
-		         pay.clear();
-		         pay.sendKeys("ENGINEERING MANUFACTURER ENTREPRENEURS RESOURCE GROUP");
-		         Thread.sleep(4000);
-		         System.out.println("Name Updated successfully");
-
-		         WebElement payAcc = driver.findElement(By.id("PaymentAcccountNumber"));
-		         payAcc.clear();
-		         payAcc.sendKeys("093705003812");
-		         Thread.sleep(4000);
-		         System.out.println("Account number successfully");
-
-		         WebElement payAdd = driver.findElement(By.id("PaymentAddress"));
-		         payAdd.clear();
-		         payAdd.sendKeys("No1&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;2 sharadhambaNagar MES Ring Road Jalahalli");
-		         Thread.sleep(4000);
-		         System.out.println("Address successfully");
-
-		         WebElement bankN = driver.findElement(By.id("PaymentBankName"));
-		         bankN.clear();
-		         bankN.sendKeys("ICIC0000937");
-		         System.out.println("Bank Update successfully");
-
-
-		         WebElement updatePaymentButton = driver.findElement(By.xpath("//button[@id='UpdatePaymentId']"));
-		         try {
-		             updatePaymentButton.click();
-		             System.out.println("Clicked 'Update Payment' button.");
-		         } catch (Exception e) {
-		             System.err.println("Error clicking 'Update Payment' button: " + e.getMessage());
-		             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", updatePaymentButton);
-		             System.out.println("Tried clicking 'Update Payment' button using JavaScript.");
-		         }
-
-		         Thread.sleep(5000);
+//		         WebDriverWait waitPayment = new WebDriverWait(driver, Duration.ofSeconds(10));
+//		         WebElement paymentDetailsLink = waitPayment.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Payment Deatils']")));
+//
+//		         try {
+//		             paymentDetailsLink.click();
+//		             System.out.println("Clicked 'Payment Deatils' successfully.");
+//		         } catch (Exception e) {
+//		             System.err.println("Error clicking 'Payment Deatils': " + e.getMessage());
+//		             // Optionally, you can try a JavaScript click as a fallback
+//		             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", paymentDetailsLink);
+//		             System.out.println("Tried clicking 'Payment Deatils' using JavaScript.");
+//		         }
+//
+//		         Thread.sleep(3000);
+//
+//		         WebElement pay = driver.findElement(By.id("PaymentName"));
+//		         pay.clear();
+//		         pay.sendKeys("ENGINEERING MANUFACTURER ENTREPRENEURS RESOURCE GROUP");
+//		         Thread.sleep(4000);
+//		         System.out.println("Name Updated successfully");
+//
+//		         WebElement payAcc = driver.findElement(By.id("PaymentAcccountNumber"));
+//		         payAcc.clear();
+//		         payAcc.sendKeys("093705003812");
+//		         Thread.sleep(4000);
+//		         System.out.println("Account number successfully");
+//
+//		         WebElement payAdd = driver.findElement(By.id("PaymentAddress"));
+//		         payAdd.clear();
+//		         payAdd.sendKeys("No1&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;2 sharadhambaNagar MES Ring Road Jalahalli");
+//		         Thread.sleep(4000);
+//		         System.out.println("Address successfully");
+//
+//		         WebElement bankN = driver.findElement(By.id("PaymentBankName"));
+//		         bankN.clear();
+//		         bankN.sendKeys("ICIC0000937");
+//		         System.out.println("Bank Update successfully");
+//
+//
+//		         WebElement updatePaymentButton = driver.findElement(By.xpath("//button[@id='UpdatePaymentId']"));
+//		         try {
+//		             updatePaymentButton.click();
+//		             System.out.println("Clicked 'Update Payment' button.");
+//		         } catch (Exception e) {
+//		             System.err.println("Error clicking 'Update Payment' button: " + e.getMessage());
+//		             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", updatePaymentButton);
+//		             System.out.println("Tried clicking 'Update Payment' button using JavaScript.");
+//		         }
+//
+//		         Thread.sleep(5000);
 //		         
 //		         
 //		         //Authentication
@@ -677,5 +709,6 @@ public class OriginalScript {
 
 
 	}
+
 
 
