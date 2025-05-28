@@ -40,7 +40,7 @@ public class CustomerLedgerReport {
 			
 			//Get Report
 			driver.findElement(By.id("CustomerLedgerReportId")).click();
-			System.out.println("Ledger report generated successfully");
+			System.out.println("Ledger reports generated successfully");
 			
 			//calling another class 
 			BannerDetails bannerDetails = new BannerDetails();

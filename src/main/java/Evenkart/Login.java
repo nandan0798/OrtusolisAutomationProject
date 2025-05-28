@@ -2,13 +2,11 @@ package Evenkart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
 import org.openqa.selenium.chrome.ChromeDriver;
 import ExcelUtils.ExcelUtils;
 
-
-
 import java.nio.file.Paths;
+import java.time.Duration;
 
 public class Login {
     public static void main(String[] args) {
@@ -24,37 +22,39 @@ public class Login {
             for (int i = 1; i < rowCount; i++) {
                 driver = new ChromeDriver();
                 driver.manage().window().maximize();
+
+                // 🔁 Implicit wait set globally
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
                 driver.get("https://ortusolis.in/eVenkart-Testing/Admin-Distributor/sign-in.php");
 
                 String email = excel.getCellData(i, 0);
                 String password = excel.getCellData(i, 1);
 
                 driver.findElement(By.name("email")).sendKeys(email);
-                
-                
                 driver.findElement(By.name("password")).sendKeys(password);
                 driver.findElement(By.name("remember")).click();
                 driver.findElement(By.cssSelector("button[type='submit']")).click();
 
-                Thread.sleep(3000);
-
                 try {
-                		String currentUrl = driver.getCurrentUrl();
-                	    if (!currentUrl.contains("sign-in.php")) {
-                	        excel.setCellData(i, 2, "Login Successful");
-                	        System.out.println("Login Successful for Row " + i);
-                	        Dashboard dashboard = new Dashboard();
-                            dashboard.dashboardClick(driver);
-                	    }
+                    String currentUrl = driver.getCurrentUrl();
+                    if (!currentUrl.contains("sign-in.php")) {
+                        excel.setCellData(i, 2, "Login Successful");
+                        System.out.println("Login Successful for Row " + i);
+                        
+                        //calling another class
+                        Dashboard dashboard = new Dashboard();
+                        dashboard.dashboardClick(driver);
+                    }
                 } catch (Exception e) {
                     excel.setCellData(i, 2, e.getMessage());
-                    System.out.println("Login failed in the row  " + i);
+                    System.out.println("Login failed in the row " + i);
                 }
 
                 driver.quit();
             }
 
-            excel.save();            
+            excel.save();
 
         } catch (Exception e) {
             e.printStackTrace();

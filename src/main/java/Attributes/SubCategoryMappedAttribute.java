@@ -16,7 +16,7 @@ public class SubCategoryMappedAttribute {
 			
 			//Select Category
 		      driver.findElement(By.xpath("//select[@id='mappedattributecategory']//option[contains(text(),'Testing Category')]")).click();
-			  Thread.sleep(6000);
+			  Thread.sleep(7000);
 			
 			//Select SubCategory 
 			  driver.findElement(By.xpath("//select[@id='mappedattributesubcategory']//option[contains(text(),'TestSubCategory')]")).click();

@@ -56,7 +56,7 @@ public class OrderReport {
 
 		// Optional: wait for table data or confirmation
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//table[@id='ordertable']//td")));
-
+		Thread.sleep(5000);
 		
 		//calling another class
 		CustomerLedgerReport customerData = new CustomerLedgerReport();
